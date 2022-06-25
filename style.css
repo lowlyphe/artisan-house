@@ -1,0 +1,42 @@
+.header {
+  margin: auto;
+  text-align: center;
+  word-spacing: 5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(198, 133, 57);
+  text-decoration: underline;
+}
+
+hr {
+  display: block;
+  overflow: hidden;
+  border-style: solid;
+  border-width: 1px;
+  background-color: black;
+}
+
+.container1 {
+  margin: 35px;
+  border: 3px;
+  border-style: solid;
+  border-color: black;
+  width: 95%;
+}
+.text {
+  float: left;
+  border-style: dashed;
+  border: 2px;
+  border-color: black;
+  background-color: black;
+}
+
+body {
+  background-color: rgb(236, 164, 75);
+}
