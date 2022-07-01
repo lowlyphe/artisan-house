@@ -4,13 +4,55 @@
   word-spacing: 5rem;
 }
 
+.ribbon {
+  background-color: #7f990c;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.ribbonHeader {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  text-align: center;
+}
+
+.logo {
+  width: 58%;
+  text-align: end;
+}
+
+.phoneNumber {
+  font-size: 40px;
+  color: aliceblue;
+  width: 30%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.links {
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 20px;
+  padding: 0%;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.linkContainer {
+  margin: auto;
+  text-align: center;
+}
+
 a {
   color: black;
   text-decoration: none;
 }
 
 a:hover {
-  color: rgb(198, 133, 57);
+  color: #70491f;
   text-decoration: underline;
 }
 
@@ -22,7 +64,7 @@ hr {
   background-color: black;
 }
 
-.container1 {
+.indexContainer {
   margin: 35px;
   border: 3px;
   border-style: solid;
@@ -38,50 +80,58 @@ hr {
 }
 
 body {
+  background-color: #70491f;
+}
+
+.bodyDiv {
+  width: 65%;
   background-color: rgb(255, 255, 255);
+  margin: auto;
+}
+
+.bathroomText {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 220px;
 }
 
 .galleryText {
+  margin-top: 10px;
   font-size: 25px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
-.bathroomContainer {
+.picturesContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 75%;
+  width: 70%;
   margin: auto;
 }
 
-.bathroomPictures > img:hover {
-  width: 480px;
-  height: 360px;
+.pictures > img:hover {
+  transform: scale(2);
+  z-index: 2;
 }
 
-.bathroomPictures {
+.pictures > img {
   float: left;
   justify-self: center;
-  width: 30%;
-  margin: 5px;
-}
-
-.interiorContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 90%;
-  margin: auto;
-}
-
-.interiorPictures {
-  float: left;
+  margin: 15px;
+  box-shadow: 0 0px 20px 2px rbga(0, 0, 0, 0.1);
+  transition: 0.5s;
+  width: 300px;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 5px;
+  border-radius: 2px solid black;
 }
 
 .reveal {
   position: relative;
-  transform: translateY(150px);
+  transform: translateX(150px);
   opacity: 0;
   transition: 1s all ease;
 }
@@ -91,14 +141,13 @@ body {
   opacity: 1;
 }
 
-.landscapingContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 90%;
-  margin: auto;
+input {
+  width: 60%;
+  margin: 8px;
+  background-color: rgb(210, 210, 210);
 }
 
-.landscapingPictures {
-  float: left;
+input[name="message"] {
+  width: 90%;
+  height: 100px;
 }

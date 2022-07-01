@@ -8,6 +8,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -32,38 +33,51 @@
   </head>
   <body>
     <div class="ribbon">
-      <div class="logo" style="margin: auto; width: 205px">
-        <img src="images/businesscardlogo.png" width="200px" height="auto" />
-        <a href="index.html"></a>
+      <div class="ribbonHeader">
+        <div class="logo">
+          <img src="images/businesscardlogo.png" width="200px" height="auto" />
+          <a href="index.html"></a>
+        </div>
+        <div class="phoneNumber">
+          <p>(330) 993-0416</p>
+        </div>
       </div>
-      <div class="header">
-        <a href="index.html" class="link">Home</a>
-        <a href="gallery.html" class="link">Gallery</a>
-        <a href="contact.html" class="link">Contact Us</a>
+      <div class="linkContainer">
+        <div class="links"><a href="index.html" class="link">Home</a></div>
+        <div class="links"><a href="gallery.html" class="link">Gallery</a></div>
+        <div class="links">
+          <a href="contact.html" class="link">Contact Us</a>
+        </div>
       </div>
+
       <hr />
     </div>
 
-    <form
-      class="generated-form"
-      method="GET"
-      action="submit.php"
-      target="_self"
-    >
-      <fieldset>
-        <legend>Contact Us</legend>
-        <label for="text">Text:</label><br />
-        <input type="text" id="text" name="text" /><br />
-        <label for="text">Text:</label><br />
-        <input type="text" id="text" name="text" /><br />
-        <label for="text">Text:</label><br />
-        <input type="text" id="text" name="text" /><br />
-        <label for="text">Text:</label><br />
-        <input type="text" id="text" name="text" /><br />
-        <label for="text">Text:</label><br />
-        <input type="text" id="text" name="text" /><br />
-      </fieldset>
-    </form>
+    <div class="bodyDiv">
+      <div style="margin: auto; margin-top: 200px; width: 35%">
+        <form
+          class="generated-form"
+          method="GET"
+          action="submit.php"
+          target="_self"
+        >
+          <fieldset>
+            <legend>Contact Us</legend>
+            <label for="name">Name:*</label><br />
+            <input type="text" id="name" name="name" /><br />
+            <label for="address">Adress:</label><br />
+            <input type="text" id="address" name="address" /><br />
+            <label for="email">Email:*</label><br />
+            <input type="text" id="email" name="email" /><br />
+            <label for="number">Phone Number:</label><br />
+            <input type="text" id="number" name="number" /><br />
+            <label for="message">Message:*</label><br />
+            <input type="text" id="message" name="message" /><br />
+          </fieldset>
+        </form>
+        <button id="submit">Sumbit</button>
+      </div>
+    </div>
 
     <script src="app.js" defer></script>
   </body>

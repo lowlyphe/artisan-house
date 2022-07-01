@@ -1,5 +1,5 @@
 function reveal() {
-  const reveals = document.querySelectorAll(".reveal");
+  const reveals = $(".reveal");
 
   for (var i = 0; i < reveals.length; i++) {
     let windowHeight = window.innerHeight;
@@ -15,3 +15,5 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
+
+$(".phoneNumber").innerText = "helloTHere";
