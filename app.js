@@ -1,19 +1,31 @@
-function reveal() {
-  const reveals = $(".reveal");
+const $linkScroll = $(".scrollFix");
+const $links = $(".linkContainer");
+$;
+console.log($links);
 
-  for (var i = 0; i < reveals.length; i++) {
-    let windowHeight = window.innerHeight;
-    let elementTop = reveals[i].getBoundingClientRect().top;
-    let elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
+function sendMail() {
+  var name = $("#contact #name").val();
+  var email = $("#contact #email").val();
+  var message = $("#contact textarea").val();
+  window.location.href =
+    "mailto:mail@company.com?subject=The subject - " +
+    name +
+    " (" +
+    email +
+    ")" +
+    "&body=" +
+    message;
 }
 
-window.addEventListener("scroll", reveal);
-
-$(".phoneNumber").innerText = "helloTHere";
+$(document).ready(() => {
+  $(window).bind("scroll", () => {
+    let navHeight = $(window).height() - 70;
+    if ($(window).scrollTop() > navHeight) {
+      $links.addClass("scrollFix");
+      console.log("scrollup");
+    } else {
+      $links.removeClass("scrollFix");
+      console.log("scrolldown");
+    }
+  });
+});

@@ -1,3 +1,10 @@
+body {
+  background-image: url("images/flag.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 .header {
   margin: auto;
   text-align: center;
@@ -5,71 +12,109 @@
 }
 
 .ribbon {
-  background-color: #7f990c;
-  position: fixed;
-  top: 0;
+  border-bottom: 5px solid black;
   width: 100%;
-  z-index: 100;
 }
 
 .ribbonHeader {
   display: flex;
   flex-direction: row;
-  margin: auto;
+  background-color: #e23131;
+  margin: 0;
+  padding: 0;
   text-align: center;
+  width: 100%;
+
+  justify-content: center;
+}
+
+.services {
+  width: 33%;
+  text-align: left;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
 }
 
 .logo {
-  width: 58%;
-  text-align: end;
+  width: 33%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  position: relative;
+}
+
+.logo > img {
+  width: 200px;
+  position: absolute;
+  left: 3%;
+  top: 15%;
 }
 
 .phoneNumber {
+  position: relative;
   font-size: 40px;
   color: aliceblue;
-  width: 30%;
-  text-align: center;
+  width: 33%;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.phoneNumber > p {
+  position: absolute;
+  bottom: 10px;
 }
 
 .links {
   display: inline-block;
   margin: 0 auto;
-  font-size: 20px;
-  padding: 0%;
+  font-size: 25px;
   padding-left: 7px;
   padding-right: 7px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-left: 5px white;
+  border-right: 5px white;
+}
+
+.links > a:link {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 0;
+}
+
+.links > a:hover {
+  background-color: black;
+  border-radius: 7px 7px 0 0;
+  transform: scale(2);
 }
 
 .linkContainer {
-  margin: auto;
+  border: 4px solid black;
   text-align: center;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
 }
 
-a {
-  color: black;
-  text-decoration: none;
+.scrollFix {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  height: 70px;
 }
 
-a:hover {
-  color: #70491f;
-  text-decoration: underline;
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
-hr {
-  display: block;
-  overflow: hidden;
-  border-style: solid;
-  border-width: 1px;
-  background-color: black;
-}
-
-.indexContainer {
-  margin: 35px;
-  border: 3px;
-  border-style: solid;
-  border-color: black;
-  width: 95%;
+.truck {
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+  padding: 30px;
+  justify-content: center;
 }
 .text {
   float: left;
@@ -79,14 +124,12 @@ hr {
   background-color: black;
 }
 
-body {
-  background-color: #70491f;
-}
-
 .bodyDiv {
   width: 65%;
   background-color: rgb(255, 255, 255);
   margin: auto;
+  border: 5px solid black;
+  justify-content: center;
 }
 
 .bathroomText {
@@ -108,38 +151,38 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   width: 70%;
+  justify-content: center;
   margin: auto;
 }
 
 .pictures > img:hover {
-  transform: scale(2);
   z-index: 2;
+  transform: scale(2);
 }
 
 .pictures > img {
   float: left;
   justify-self: center;
   margin: 15px;
-  box-shadow: 0 0px 20px 2px rbga(0, 0, 0, 0.1);
-  transition: 0.5s;
+  transition: 0.2s;
   width: 300px;
   height: auto;
-  border: 2px solid black;
   border-radius: 5px;
-  border-radius: 2px solid black;
+  box-shadow: 7px 5px 5px rgb(109, 109, 109);
 }
 
-.reveal {
+/* .reveal {
   position: relative;
-  transform: translateX(150px);
   opacity: 0;
-  transition: 1s all ease;
+  transform: translateY(20px), translateX(10px), translateY(5px);
+
+  transition: 0.5s all ease;
 }
 
 .reveal.active {
   transform: translateY(0);
   opacity: 1;
-}
+} */
 
 input {
   width: 60%;
