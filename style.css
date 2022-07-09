@@ -3,27 +3,24 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 100%;
-}
-
-.header {
-  margin: auto;
-  text-align: center;
-  word-spacing: 5rem;
+  margin: 0;
 }
 
 .ribbon {
-  border-bottom: 5px solid black;
   width: 100%;
 }
 
 .ribbonHeader {
   display: flex;
   flex-direction: row;
-  background-color: #e23131;
+  background-color: #ffffff;
+  position: relative;
+  top: 0;
   margin: 0;
   padding: 0;
   text-align: center;
   width: 100%;
+  height: 110px;
 
   justify-content: center;
 }
@@ -51,47 +48,91 @@ body {
 }
 
 .phoneNumber {
-  position: relative;
   font-size: 40px;
-  color: aliceblue;
+  color: rgb(0, 0, 0);
   width: 33%;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .phoneNumber > p {
-  position: absolute;
-  bottom: 10px;
+  left: 60%;
+  width: 100%;
 }
 
 .links {
   display: inline-block;
-  margin: 0 auto;
-  font-size: 25px;
+  font-size: 20px;
   padding-left: 7px;
   padding-right: 7px;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  border-left: 5px white;
-  border-right: 5px white;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: Arial, Helvetica, sans-serif; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .links > a:link {
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   padding-bottom: 0;
+  color: #ffffff;
+}
+
+.links > a:visited {
+  color: #ffffff;
 }
 
 .links > a:hover {
-  background-color: black;
-  border-radius: 7px 7px 0 0;
-  transform: scale(2);
+  color: red;
 }
 
 .linkContainer {
-  border: 4px solid black;
-  text-align: center;
-  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(11, 53, 204);
   width: 100%;
+  height: 45px;
+  margin: 0;
+  padding: 0;
 }
 
 .scrollFix {
@@ -106,16 +147,19 @@ body {
     transform: translateX(-100%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
 }
 
 .truck {
   /* This section calls the slideInFromLeft animation we defined above */
-  animation: 2s ease-out 0s 1 slideInFromLeft;
+  animation: 3s ease-out 0s 1 slideInFromLeft;
   padding: 30px;
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
+
 .text {
   float: left;
   border-style: dashed;
@@ -129,7 +173,10 @@ body {
   background-color: rgb(255, 255, 255);
   margin: auto;
   border: 5px solid black;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .bathroomText {
@@ -171,26 +218,85 @@ body {
   box-shadow: 7px 5px 5px rgb(109, 109, 109);
 }
 
-/* .reveal {
-  position: relative;
-  opacity: 0;
-  transform: translateY(20px), translateX(10px), translateY(5px);
-
-  transition: 0.5s all ease;
-}
-
-.reveal.active {
-  transform: translateY(0);
-  opacity: 1;
-} */
-
 input {
   width: 60%;
   margin: 8px;
-  background-color: rgb(210, 210, 210);
+  background-color: rgb(255, 255, 255);
 }
 
-input[name="message"] {
+
+
+.body-container-2 {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 100%;
+}
+
+.statement {
   width: 90%;
-  height: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-justify: center;
+}
+
+.indexServices {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.ourServices {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: solid;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+.servicesGallery {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.servicesPictures {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 30px;
+}
+
+.servicesPictures > img {
+  width: 450px;
+  height: 351px;
+  border: 2px solid black;
+  padding: 5px;
+  box-shadow: 7px 5px 5px rgb(109, 109, 109);
+}
+
+.servicesPictures > p {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 45px;
+}
+
+.contactHeader {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }

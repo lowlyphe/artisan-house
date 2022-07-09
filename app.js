@@ -1,25 +1,25 @@
 const $linkScroll = $(".scrollFix");
 const $links = $(".linkContainer");
-$;
-console.log($links);
 
 function sendMail() {
-  var name = $("#contact #name").val();
-  var email = $("#contact #email").val();
-  var message = $("#contact textarea").val();
+  const $name = $("#name").val();
+  const $address = $("#address").val();
+  const $email = $("#email").val();
+  const $number = $("#number").val();
+  const $message = $("#message").val();
   window.location.href =
-    "mailto:mail@company.com?subject=The subject - " +
-    name +
+    "mailto:jones.kyle2893@gmail.com?subject=Quote Request - " +
+    $name +
     " (" +
-    email +
+    $email +
     ")" +
     "&body=" +
-    message;
+    $message;
 }
 
 $(document).ready(() => {
   $(window).bind("scroll", () => {
-    let navHeight = $(window).height() - 70;
+    let navHeight = $(window).height() - 30;
     if ($(window).scrollTop() > navHeight) {
       $links.addClass("scrollFix");
       console.log("scrollup");
