@@ -1,5 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js_script(document.currentScript); }/*FB_PKG_DELIM*/
-
-__d("CometNewsfeedKeyCommandWidget",["createKeyCommandWidget"],(function(a,b,c,d,e,f,g){"use strict";a=c("createKeyCommandWidget")();g["default"]=a}),98);
-__d("CometFeedStoryDropdownMenuLoggerContext",["react"],(function(a,b,c,d,e,f,g){"use strict";a=d("react");b=a.createContext({nodeID:null});g["default"]=b}),98);
-__d("CometMediaViewerRightRailUFIGlimmer.react",["BaseGlimmer.react","react"],(function(a,b,c,d,e,f,g){"use strict";var h=d("react");function a(){return h.jsxs("div",{className:"dati1w0a ihqw7lf3 hv4rvrfc discj3wi kwzhilbh j83agx80",children:[h.jsx(c("BaseGlimmer.react"),{className:"a12rg87m bsodd3zb mwvzfrdb kxcb68kb kgjeooe1 dwerhba3",index:1}),h.jsx(c("BaseGlimmer.react"),{className:"a12rg87m bsodd3zb mwvzfrdb kxcb68kb kgjeooe1 dwerhba3",index:2}),h.jsx(c("BaseGlimmer.react"),{className:"a12rg87m bsodd3zb mwvzfrdb kxcb68kb kgjeooe1 dwerhba3",index:3})]})}a.displayName=a.name+" [from "+f.id+"]";g["default"]=a}),98);
