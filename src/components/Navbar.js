@@ -16,12 +16,12 @@ export default function Navbar() {
   const stickNavbar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
-      windowHeight > 500 ? setStickyClass('fixed top-0 left-0 z-50') : setStickyClass('relative');
+      windowHeight > 135 ? setStickyClass('fixed top-0 left-0 z-50 w-screen') : setStickyClass('relative');
     }
   };
 
   return (
-    <div className={`flex justify-center p-6 py-0 bg-blue-700 ${stickyClass} drop-shadow-md`}>
+    <div className={`flex justify-center p-6 py-0 bg-blue-700 ${stickyClass} drop-shadow-lg`}>
         <ul className='flex text-white text-xl'>
             <li className='px-4 py-2'>
                 <a className='hover:text-black' href={'#'}>Home</a>
