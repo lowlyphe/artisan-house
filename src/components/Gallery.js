@@ -11,7 +11,7 @@ export default function Gallery() {
   return (
     <div>
         <p className='pt-24 text-2xl'>| Our Services |</p>
-        <div className='grid grid-cols-3 gap-8 grid-rows-2 pt-24'>
+        <div className='flex flex-col md:grid grid-cols-3 gap-8 grid-rows-2 pt-24'>
             <div className='flex flex-col items-center'>
                 <img className='w-96 h-64 border border-solid-1 border-gray-500 p-1 drop-shadow-xl' src={wholeHome} />
                 <a href={'#'} className='text-blue-500 font-bold hover:text-black'>Whole Home Remodeling</a>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import logo from '../assets/businesscardlogo.png'
 
-export default function Navbar() {
+export default function Navbar({ open, setOpen }) {
 
     const [stickyClass, setStickyClass] = useState('relative');
 
@@ -24,13 +23,25 @@ export default function Navbar() {
     <div className={`flex justify-center p-6 py-0 bg-blue-700 ${stickyClass} drop-shadow-lg`}>
         <ul className='flex text-white text-xl'>
             <li className='px-4 py-2'>
-                <a className='hover:text-black' href={'#'}>Home</a>
+                Whole Home
             </li>
             <li className='px-4 py-2'>
-                <a className='hover:text-black' href={'#'}>Services</a>
+                Kitchens
             </li>
             <li className='px-4 py-2'>
-                <a className='hover:text-black' href={'#'}>Contact Us</a>
+                Bathrooms
+            </li>
+            <li className='px-4 py-2'>
+                Exterior
+            </li>
+            <li className='px-4 py-2'>
+                Landscaping
+            </li>
+            <li className='px-4 py-2'>
+                Basements
+            </li>
+            <li className='px-4 py-2'>
+                <button className='hover:text-black' onClick={() => setOpen(open => !open)}>Contact Us</button>
             </li>
         </ul>
     </div>
