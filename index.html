@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Artisan House LLC — home remodeling and building. Kitchens, bathrooms, whole-home remodels, decks, basements and landscaping." />
+  <title>Artisan House LLC</title>
+  <link rel="icon" href="assets/businesscardlogo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <img src="assets/businesscardlogo.png" alt="Artisan House logo" class="header__logo" />
+    <p class="header__contact">+1 330-993-0416</p>
+    <p class="header__contact">ArtisanHousellc@yahoo.com</p>
+    <img src="assets/insured.png" alt="Fully insured" class="header__insured" />
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <ul class="navbar__list">
+      <li class="navbar__item">Whole Home</li>
+      <li class="navbar__item">Kitchens</li>
+      <li class="navbar__item">Bathrooms</li>
+      <li class="navbar__item">Exterior</li>
+      <li class="navbar__item">Landscaping</li>
+      <li class="navbar__item">Basements</li>
+      <li class="navbar__item">
+        <button type="button" class="navbar__contact-btn" data-open-contact>Contact Us</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Homepage -->
+  <main class="homepage">
+    <img class="homepage__hero" src="assets/homepagehome.jpg" alt="Artisan House featured home" />
+
+    <div class="homepage__body">
+      <div class="homepage__intro">
+        <div class="homepage__intro-text">
+          <p>
+            <strong>Welcome to Artisan House.</strong> Where you're not only a customer,
+            you're family. We treat your house as if it's our own, and we're here for you
+            every step of the way. Give us a call and let us be the artisans turning your
+            home dreams into reality.
+          </p>
+        </div>
+        <img class="homepage__truck" src="assets/truckWithLogo.png" alt="Artisan truck" />
+      </div>
+
+      <!-- Gallery -->
+      <section class="gallery">
+        <p class="gallery__title">| Our Services |</p>
+        <div class="gallery__grid">
+          <article class="gallery__card">
+            <img class="gallery__img" src="assets/wholeHome.png" alt="Whole home remodeling" />
+            <a href="#" class="gallery__link">Whole Home Remodeling</a>
+            <p class="gallery__desc">Full-scope remodels that reimagine your entire home. From layout and structure to the final finishes, we manage every phase so the result feels cohesive, functional and unmistakably yours.</p>
+          </article>
+          <article class="gallery__card">
+            <img class="gallery__img" src="assets/bathroom/vanity1.jpg" alt="Bathroom remodeling" />
+            <a href="#" class="gallery__link">Bathrooms</a>
+            <p class="gallery__desc">Bathrooms built for comfort and durability. Custom vanities, tile, lighting and fixtures installed with the kind of craftsmanship that holds up for years.</p>
+          </article>
+          <article class="gallery__card">
+            <img class="gallery__img" src="assets/kitchenHero.jpg" alt="Kitchen remodeling" />
+            <a href="#" class="gallery__link">Kitchens</a>
+            <p class="gallery__desc">The heart of the home, done right. Cabinetry, countertops, islands and layouts designed around how you actually cook, gather and live.</p>
+          </article>
+          <article class="gallery__card">
+            <img class="gallery__img" src="assets/deck.webp" alt="Deck building" />
+            <a href="#" class="gallery__link">Decks</a>
+            <p class="gallery__desc">Outdoor living spaces made to last. Quality-built decks that extend your home and stand up to every season.</p>
+          </article>
+          <article class="gallery__card">
+            <img class="gallery__img" src="assets/den/den1.jpg" alt="Basement remodeling" />
+            <a href="#" class="gallery__link">Basements</a>
+            <p class="gallery__desc">Turn unused square footage into your favorite room. Finished basements, home offices, dens and more — dry, comfortable and code-compliant.</p>
+          </article>
+          <article class="gallery__card">
+            <img class="gallery__img" src="assets/landscaping/stone1.jpg" alt="Landscaping and stonework" />
+            <a href="#" class="gallery__link">Landscaping</a>
+            <p class="gallery__desc">Stonework, hardscaping and landscaping that elevate your curb appeal and make the outside of your home as inviting as the inside.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Call to action -->
+      <div class="cta">
+        <div>
+          <p class="cta__lead">Ready to discuss your remodeling or building project?</p>
+          <p class="cta__sub">Call us toll free at 330-993-0416 to discuss your next dream project</p>
+        </div>
+        <button type="button" class="cta__btn" data-open-contact>Contact Us</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer__name">Artisan House LLC</p>
+    <p class="footer__copy">
+      Copyright <span id="year">2022</span> &copy; All Rights Reserved |
+      <a href="https://kyle-jones.dev">Developer</a>
+    </p>
+  </footer>
+
+  <!-- Contact modal -->
+  <div class="modal" id="contact-modal" aria-hidden="true">
+    <div class="modal__overlay" data-close-contact></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+      <form id="contact-form" class="contact-form">
+        <div>
+          <h2 id="contact-title" class="contact-form__title">Schedule Your Consultation</h2>
+          <p class="contact-form__intro">
+            At Artisan House, we understand that when taking on a sizeable project you have
+            a lot of options. Talk with us, tell us your vision, and we'll work with you
+            every step of the way until we make it your reality.
+          </p>
+        </div>
+        <input class="contact-form__input" type="text" name="name" placeholder="Your name" required />
+        <input class="contact-form__input" type="email" name="email" placeholder="Email" required />
+        <textarea class="contact-form__input" name="message" placeholder="Your message" required></textarea>
+        <p class="contact-form__status" id="contact-status" role="status"></p>
+        <div class="contact-form__actions">
+          <button type="button" class="btn btn--cancel" data-close-contact>Cancel</button>
+          <button type="submit" class="btn btn--send">Send a message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
