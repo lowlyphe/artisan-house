@@ -34,6 +34,11 @@
         <button type="button" class="navbar__contact-btn" data-open-contact>Contact Us</button>
       </li>
     </ul>
+    <div class="beam" aria-hidden="true">
+      <span class="beam__strap beam__strap--left"></span>
+      <span class="beam__strap beam__strap--center"></span>
+      <span class="beam__strap beam__strap--right"></span>
+    </div>
   </nav>
 
   <!-- Homepage -->
@@ -54,44 +59,132 @@
         <img class="homepage__truck" src="assets/truckWithLogo.png" alt="Artisan truck" />
       </div>
 
-      <!-- Gallery -->
-      <section class="gallery">
+      <!-- Services -->
+      <section class="services" id="services">
         <p class="gallery__title">| Our Services |</p>
-        <div class="gallery__grid">
-          <article class="gallery__card">
-            <img class="gallery__img" src="assets/wholeHome.png" alt="Whole home remodeling" />
-            <a href="#" class="gallery__link">Whole Home Remodeling</a>
-            <p class="gallery__desc">Full-scope remodels that reimagine your entire home. From layout and structure to the final finishes, we manage every phase so the result feels cohesive, functional and unmistakably yours.</p>
+        <div class="services__strip" role="list">
+          <article class="svc" role="listitem" tabindex="0" style="background-image:url('assets/service-wholehome.jpg')">
+            <span class="svc__num">01</span>
+            <span class="svc__vlabel">Whole Home</span>
+            <div class="svc__panel">
+              <h3 class="svc__title">Whole Home Remodeling</h3>
+              <span class="svc__rule"></span>
+              <p class="svc__desc">Full-scope remodels that reimagine your entire home — from layout and structure to the final finishes, managed every step of the way.</p>
+              <button type="button" class="svc__btn" data-open-contact>Start your project</button>
+            </div>
           </article>
-          <article class="gallery__card">
-            <img class="gallery__img" src="assets/bathroom/vanity1.jpg" alt="Bathroom remodeling" />
-            <a href="#" class="gallery__link">Bathrooms</a>
-            <p class="gallery__desc">Bathrooms built for comfort and durability. Custom vanities, tile, lighting and fixtures installed with the kind of craftsmanship that holds up for years.</p>
+          <article class="svc" role="listitem" tabindex="0" style="background-image:url('assets/service-kitchen.jpg')">
+            <span class="svc__num">02</span>
+            <span class="svc__vlabel">Kitchens</span>
+            <div class="svc__panel">
+              <h3 class="svc__title">Kitchens</h3>
+              <span class="svc__rule"></span>
+              <p class="svc__desc">Cabinetry, countertops, islands and layouts designed around how you actually cook, gather and live.</p>
+              <button type="button" class="svc__btn" data-open-contact>Start your project</button>
+            </div>
           </article>
-          <article class="gallery__card">
-            <img class="gallery__img" src="assets/kitchenHero.jpg" alt="Kitchen remodeling" />
-            <a href="#" class="gallery__link">Kitchens</a>
-            <p class="gallery__desc">The heart of the home, done right. Cabinetry, countertops, islands and layouts designed around how you actually cook, gather and live.</p>
+          <article class="svc" role="listitem" tabindex="0" style="background-image:url('assets/service-bath.jpg')">
+            <span class="svc__num">03</span>
+            <span class="svc__vlabel">Bathrooms</span>
+            <div class="svc__panel">
+              <h3 class="svc__title">Bathrooms</h3>
+              <span class="svc__rule"></span>
+              <p class="svc__desc">Custom vanities, tile, lighting and fixtures installed with the kind of craftsmanship that holds up for years.</p>
+              <button type="button" class="svc__btn" data-open-contact>Start your project</button>
+            </div>
           </article>
-          <article class="gallery__card">
-            <img class="gallery__img" src="assets/deck.webp" alt="Deck building" />
-            <a href="#" class="gallery__link">Decks</a>
-            <p class="gallery__desc">Outdoor living spaces made to last. Quality-built decks that extend your home and stand up to every season.</p>
+          <article class="svc" role="listitem" tabindex="0" style="background-image:url('assets/deck.webp')">
+            <span class="svc__num">04</span>
+            <span class="svc__vlabel">Decks &amp; Porches</span>
+            <div class="svc__panel">
+              <h3 class="svc__title">Decks &amp; Porches</h3>
+              <span class="svc__rule"></span>
+              <p class="svc__desc">Timber-frame porches, decks and outdoor living spaces built to last through every Ohio season.</p>
+              <button type="button" class="svc__btn" data-open-contact>Start your project</button>
+            </div>
           </article>
-          <article class="gallery__card">
-            <img class="gallery__img" src="assets/den/den1.jpg" alt="Basement remodeling" />
-            <a href="#" class="gallery__link">Basements</a>
-            <p class="gallery__desc">Turn unused square footage into your favorite room. Finished basements, home offices, dens and more — dry, comfortable and code-compliant.</p>
+          <article class="svc" role="listitem" tabindex="0" style="background-image:url('assets/den/den1.jpg')">
+            <span class="svc__num">05</span>
+            <span class="svc__vlabel">Basements</span>
+            <div class="svc__panel">
+              <h3 class="svc__title">Basements</h3>
+              <span class="svc__rule"></span>
+              <p class="svc__desc">Turn unused square footage into your favorite room — finished, comfortable and code-compliant.</p>
+              <button type="button" class="svc__btn" data-open-contact>Start your project</button>
+            </div>
           </article>
-          <article class="gallery__card">
-            <img class="gallery__img" src="assets/landscaping/stone1.jpg" alt="Landscaping and stonework" />
-            <a href="#" class="gallery__link">Landscaping</a>
-            <p class="gallery__desc">Stonework, hardscaping and landscaping that elevate your curb appeal and make the outside of your home as inviting as the inside.</p>
+          <article class="svc" role="listitem" tabindex="0" style="background-image:url('assets/landscaping/stone1.jpg')">
+            <span class="svc__num">06</span>
+            <span class="svc__vlabel">Landscaping</span>
+            <div class="svc__panel">
+              <h3 class="svc__title">Landscaping</h3>
+              <span class="svc__rule"></span>
+              <p class="svc__desc">Stonework, hardscaping and landscaping that elevate your curb appeal from the ground up.</p>
+              <button type="button" class="svc__btn" data-open-contact>Start your project</button>
+            </div>
           </article>
         </div>
+        <p class="services__hint"><span class="services__hint-hover">Hover a service to explore</span><span class="services__hint-swipe">Swipe to explore your service</span></p>
       </section>
 
       <!-- Call to action -->
+      <!-- Portfolio -->
+      <section class="portfolio" id="work">
+        <p class="gallery__title">| Our Work |</p>
+        <div class="portfolio__filters" role="tablist">
+          <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="kitchen">Kitchens</button>
+          <button type="button" class="filter-btn" data-filter="bath">Bathrooms</button>
+          <button type="button" class="filter-btn" data-filter="basement">Basements</button>
+          <button type="button" class="filter-btn" data-filter="exterior">Exteriors</button>
+          <button type="button" class="filter-btn" data-filter="interior">Interiors</button>
+          <button type="button" class="filter-btn" data-filter="detail">Details</button>
+          <button type="button" class="filter-btn" data-filter="process">In&nbsp;Progress</button>
+        </div>
+        <div class="portfolio__grid" id="portfolio-grid" aria-live="polite"></div>
+        <p class="portfolio__empty" id="portfolio-empty" hidden>Gallery is loading&hellip;</p>
+      </section>
+
+      <!-- Before & After -->
+      <section class="beforeafter" id="before-after">
+        <p class="gallery__title">| Before &amp; After |</p>
+        <div class="ba-grid">
+          <div class="ba-card">
+            <div class="ba-slider" style="aspect-ratio:4/3">
+              <img class="ba-img ba-after" src="assets/gallery/ba-basement-after.jpg" loading="lazy" alt="Finished basement after remodel, Ohio" />
+              <div class="ba-clip"><img class="ba-img ba-before" src="assets/gallery/ba-basement-before.jpg" alt="Dated basement before remodel, Ohio" /></div>
+              <span class="ba-tag ba-tag--before">Before</span>
+              <span class="ba-tag ba-tag--after">After</span>
+              <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal before and after of basement remodel" />
+              <span class="ba-handle" aria-hidden="true"></span>
+            </div>
+            <p class="ba-caption">Basement transformation</p>
+          </div>
+          <div class="ba-card">
+            <div class="ba-slider" style="aspect-ratio:3/4">
+              <img class="ba-img ba-after" src="assets/gallery/ba-stairs-after.jpg" loading="lazy" alt="Refinished staircase after remodel, Ohio" />
+              <div class="ba-clip"><img class="ba-img ba-before" src="assets/gallery/ba-stairs-before.jpg" alt="Worn staircase carpet before remodel, Ohio" /></div>
+              <span class="ba-tag ba-tag--before">Before</span>
+              <span class="ba-tag ba-tag--after">After</span>
+              <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal before and after of staircase" />
+              <span class="ba-handle" aria-hidden="true"></span>
+            </div>
+            <p class="ba-caption">Staircase refinish</p>
+          </div>
+          <div class="ba-card">
+            <div class="ba-slider" style="aspect-ratio:4/3">
+              <img class="ba-img ba-after" src="assets/gallery/ba-pool-after.jpg" loading="lazy" alt="Pool with new blue liner after restoration, Ohio" />
+              <div class="ba-clip"><img class="ba-img ba-before" src="assets/gallery/ba-pool-before.jpg" alt="Neglected pool before restoration, Ohio" /></div>
+              <span class="ba-tag ba-tag--before">Before</span>
+              <span class="ba-tag ba-tag--after">After</span>
+              <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal before and after of pool restoration" />
+              <span class="ba-handle" aria-hidden="true"></span>
+            </div>
+            <p class="ba-caption">Pool liner restoration</p>
+          </div>
+        </div>
+      </section>
+
       <div class="cta">
         <div>
           <p class="cta__lead">Ready to discuss your remodeling or building project?</p>
@@ -101,6 +194,15 @@
       </div>
     </div>
   </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button type="button" class="lightbox__close" aria-label="Close">&times;</button>
+    <button type="button" class="lightbox__nav lightbox__prev" aria-label="Previous">&lsaquo;</button>
+    <img class="lightbox__img" id="lightbox-img" alt="" />
+    <button type="button" class="lightbox__nav lightbox__next" aria-label="Next">&rsaquo;</button>
+    <p class="lightbox__caption" id="lightbox-caption"></p>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
