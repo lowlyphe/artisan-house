@@ -7,7 +7,47 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactModal();
   initPortfolio();
   initBeforeAfter();
+  initForge();
 });
+
+// Size the embedded Chefs Forge builder to its own content so there's
+// no inner scrollbar, and keep it fitted as the visitor interacts.
+function initForge() {
+  const iframe = document.querySelector('.forge__frame');
+  if (!iframe) return;
+
+  const fit = () => {
+    try {
+      const d = iframe.contentDocument;
+      if (!d || !d.documentElement) return;
+      const h = Math.max(d.body ? d.body.scrollHeight : 0, d.documentElement.scrollHeight);
+      if (h > 120) iframe.style.height = h + 'px';
+    } catch (e) { /* cross-origin: keep CSS height */ }
+  };
+
+  const watch = () => {
+    try {
+      const d = iframe.contentDocument;
+      if (!d || !d.body) return;
+      if ('ResizeObserver' in window) new ResizeObserver(fit).observe(d.body);
+      new MutationObserver(fit).observe(d.body, { subtree: true, childList: true, attributes: true });
+    } catch (e) { /* ignore */ }
+  };
+
+  const onReady = () => {
+    fit();
+    watch();
+    [150, 500, 1200, 2500].forEach((t) => setTimeout(fit, t));
+  };
+
+  iframe.addEventListener('load', onReady);
+  window.addEventListener('resize', () => setTimeout(fit, 100));
+
+  // Handle the case where the iframe finished loading before this ran.
+  try {
+    if (iframe.contentDocument && iframe.contentDocument.readyState === 'complete') onReady();
+  } catch (e) { /* ignore */ }
+}
 
 // Keep the copyright year current instead of hardcoding it.
 function setFooterYear() {
