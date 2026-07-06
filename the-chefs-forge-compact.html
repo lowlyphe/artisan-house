@@ -579,9 +579,7 @@ body{background:radial-gradient(120% 90% at 50% -10%,#241d16 0%,#14110d 55%,#0b0
 .dial-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .dial{display:flex;flex-direction:column;align-items:center;gap:7px}
 .dial-cap{font-family:var(--ff-mono);font-size:8.5px;letter-spacing:.16em;color:var(--stone-dim)}
-.dials .wheel-mount{width:100%;max-width:118px;padding:7px;border-radius:50%;
-  background:conic-gradient(from 210deg,#2a2620,#3d3830,#2a2620,#3d3830,#2a2620);
-  box-shadow:inset 0 0 0 1px #4a4438,0 3px 8px #000}
+.dials .wheel-mount{width:100%;max-width:124px;padding:2px;background:none;box-shadow:none}
 .dials .wheel-name{font-family:var(--ff-disp);font-weight:700;font-size:12px;color:var(--stone);text-align:center;min-height:15px;line-height:1}
 
 /* readout */
@@ -1961,7 +1959,7 @@ function makeWheel(mountId, nameId, items, getKey, onPick){
   const mount=document.getElementById(mountId), nameEl=document.getElementById(nameId);
   if(!mount) return;
   const n=items.length, step=360/n;
-  const cx=90, cy=90, R=86, r=50, hub=r-3;
+  const cx=90, cy=90, R=80, r=48, hub=44;
   const polar=(cxx,cyy,rad,deg)=>{ const a=(deg-90)*Math.PI/180; return [cxx+rad*Math.cos(a), cyy+rad*Math.sin(a)]; };
   // wedge i centered at angle i*step (0 = top/12 o'clock)
   let wedges='';
@@ -1972,11 +1970,44 @@ function makeWheel(mountId, nameId, items, getKey, onPick){
     const large=(a1-a0)>180?1:0;
     wedges+=`<path d="M${ox0} ${oy0} A${R} ${R} 0 ${large} 1 ${ox1} ${oy1} L${ix1} ${iy1} A${r} ${r} 0 ${large} 0 ${ix0} ${iy0} Z" fill="${items[i].hex}" stroke="rgba(0,0,0,.28)" stroke-width="0.8"/>`;
   }
-  mount.innerHTML=`<svg viewBox="0 0 180 180" aria-label="Color wheel">
-    <g class="wheel-ring" id="${mountId}-ring">${wedges}</g>
-    <circle cx="${cx}" cy="${cy}" r="${hub}" id="${mountId}-hub" fill="#000" stroke="var(--line-2)" stroke-width="1"/>
-    <circle cx="${cx}" cy="${cy}" r="${hub-7}" fill="none" stroke="rgba(255,255,255,.10)" stroke-width="1"/>
-    <polygon points="${cx-8},6 ${cx+8},6 ${cx},20" fill="var(--gold)"/>
+  let ticks='';
+  for(let i=0;i<60;i++){ const a=i*6; const [tx1,ty1]=polar(cx,cy,80.5,a),[tx2,ty2]=polar(cx,cy,87.5,a);
+    ticks+=`<line x1="${tx1.toFixed(1)}" y1="${ty1.toFixed(1)}" x2="${tx2.toFixed(1)}" y2="${ty2.toFixed(1)}" stroke="rgba(255,255,255,.09)" stroke-width="0.7"/>`; }
+  const uid=mountId;
+  mount.innerHTML=`<svg viewBox="0 0 180 180" aria-label="Color selector knob">
+    <defs>
+      <linearGradient id="gold-${uid}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#fbe8ad"/><stop offset=".45" stop-color="#e6c063"/>
+        <stop offset=".55" stop-color="#caa44e"/><stop offset="1" stop-color="#7f5f27"/></linearGradient>
+      <linearGradient id="bez-${uid}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#565049"/><stop offset=".5" stop-color="#2b2620"/><stop offset="1" stop-color="#0d0b09"/></linearGradient>
+      <linearGradient id="bevel-${uid}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#d7cfc0"/><stop offset=".5" stop-color="#4a453b"/><stop offset="1" stop-color="#100e0b"/></linearGradient>
+      <linearGradient id="inrim-${uid}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#0c0a08"/><stop offset="1" stop-color="#4a443a"/></linearGradient>
+      <radialGradient id="gloss-${uid}" cx="38%" cy="30%" r="72%">
+        <stop offset="0" stop-color="rgba(255,255,255,.6)"/><stop offset=".35" stop-color="rgba(255,255,255,.14)"/><stop offset="1" stop-color="rgba(255,255,255,0)"/></radialGradient>
+      <radialGradient id="vig-${uid}" cx="50%" cy="46%" r="52%">
+        <stop offset="0" stop-color="rgba(0,0,0,0)"/><stop offset=".68" stop-color="rgba(0,0,0,0)"/><stop offset="1" stop-color="rgba(0,0,0,.5)"/></radialGradient>
+      <filter id="sh-${uid}" x="-25%" y="-25%" width="150%" height="150%">
+        <feDropShadow dx="0" dy="3" stdDeviation="3.5" flood-color="#000" flood-opacity=".55"/></filter>
+      <filter id="psh-${uid}" x="-60%" y="-60%" width="220%" height="220%">
+        <feDropShadow dx="0" dy="1.2" stdDeviation="1.1" flood-color="#000" flood-opacity=".7"/></filter>
+    </defs>
+    <circle cx="${cx}" cy="${cy}" r="88" fill="url(#bez-${uid})" filter="url(#sh-${uid})"/>
+    <circle cx="${cx}" cy="${cy}" r="88" fill="none" stroke="url(#bevel-${uid})" stroke-width="1.6"/>
+    ${ticks}
+    <circle cx="${cx}" cy="${cy}" r="80" fill="#0b0907"/>
+    <g class="wheel-ring" id="${uid}-ring">${wedges}</g>
+    <circle cx="${cx}" cy="${cy}" r="48" fill="none" stroke="url(#inrim-${uid})" stroke-width="4"/>
+    <circle cx="${cx}" cy="${cy}" r="44" id="${uid}-hub" fill="#000"/>
+    <circle cx="${cx}" cy="${cy}" r="44" fill="url(#vig-${uid})"/>
+    <circle cx="${cx}" cy="${cy}" r="44" fill="url(#gloss-${uid})"/>
+    <circle cx="${cx}" cy="${cy}" r="44" fill="none" stroke="rgba(0,0,0,.45)" stroke-width="1"/>
+    <g filter="url(#psh-${uid})">
+      <polygon points="80,1 100,1 90,17" fill="url(#gold-${uid})" stroke="#6f5320" stroke-width="0.7" stroke-linejoin="round"/>
+      <polygon points="84,3.5 96,3.5 90,11" fill="rgba(255,255,255,.45)"/>
+    </g>
   </svg>`;
   const ring=document.getElementById(mountId+'-ring');
   ring.style.transformBox='fill-box'; ring.style.transformOrigin='center';
@@ -2196,18 +2227,24 @@ function init3DOnce(){
   renderer=new THREE.WebGLRenderer({antialias:true});
   renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
   renderer.setSize(W,H);
+  renderer.outputEncoding=THREE.sRGBEncoding;
+  renderer.toneMapping=THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure=1.08;
   renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap;
   host.appendChild(renderer.domElement);
 
-  scene.add(new THREE.HemisphereLight('#e8eef2','#42372a',0.9));
-  const sun=new THREE.DirectionalLight('#fff3df',1.05); sun.position.set(9,15,6); sun.castShadow=true;
-  sun.shadow.mapSize.set(1024,1024); sun.shadow.camera.near=1; sun.shadow.camera.far=60;
+  scene.environment=makeEnvMap(renderer);   // reflections for steel & polished stone
+
+  scene.add(new THREE.HemisphereLight('#e8eef2','#3a3026',0.55));
+  const sun=new THREE.DirectionalLight('#fff3df',1.55); sun.position.set(9,15,6); sun.castShadow=true;
+  sun.shadow.mapSize.set(2048,2048); sun.shadow.camera.near=1; sun.shadow.camera.far=60; sun.shadow.radius=3; sun.shadow.bias=-0.0004;
   sun.shadow.camera.left=-16; sun.shadow.camera.right=16; sun.shadow.camera.top=16; sun.shadow.camera.bottom=-16;
   scene.add(sun);
+  const rim=new THREE.DirectionalLight('#bcd2e6',0.4); rim.position.set(-8,6,-7); scene.add(rim);
 
   // 12 x 12 ft patio pad
   const pad=new THREE.Mesh(new THREE.PlaneGeometry(12,12),
-      new THREE.MeshStandardMaterial({color:'#9d978c',roughness:.96}));
+      new THREE.MeshStandardMaterial({color:'#8f887c',roughness:.98,metalness:0}));
   pad.rotation.x=-Math.PI/2; pad.position.set(6,0,6); pad.receiveShadow=true; scene.add(pad);
   const grid=new THREE.GridHelper(12,12,'#7a746a','#7a746a');
   grid.position.set(6,0.012,6); grid.material.transparent=true; grid.material.opacity=.4; scene.add(grid);
@@ -2230,16 +2267,98 @@ function init3DOnce(){
 function onResize3D(){ if(!renderer) return; const host=document.getElementById('three-canvas');
   const W=host.clientWidth, H=host.clientHeight; camera.aspect=W/H; camera.updateProjectionMatrix(); renderer.setSize(W,H); }
 
-/* materials */
+/* ---------- procedural textures (built once, cached) ---------- */
+const RIBPITCH=0.42;   // ft between panel ribs
+const STONETILE=1.6;   // ft per stone grain tile
+let _ribTex,_steelRough,_stoneTex={};
+function ribNormalTex(){
+  if(_ribTex) return _ribTex;
+  const W=96,H=4,c=document.createElement('canvas');c.width=W;c.height=H;const g=c.getContext('2d');
+  const img=g.createImageData(W,H);
+  for(let x=0;x<W;x++){
+    const u=x/W;
+    const slope=Math.sin(u*Math.PI*2)*0.9 + Math.sin(u*Math.PI*8)*0.12;  // major rib + fine ripple
+    let nx=-slope,ny=0,nz=1;const L=Math.hypot(nx,ny,nz);nx/=L;nz/=L;
+    const R=(nx*.5+.5)*255,Gc=(ny*.5+.5)*255,B=(nz*.5+.5)*255;
+    for(let y=0;y<H;y++){const i=(y*W+x)*4;img.data[i]=R;img.data[i+1]=Gc;img.data[i+2]=B;img.data[i+3]=255;}
+  }
+  g.putImageData(img,0,0);
+  _ribTex=new THREE.CanvasTexture(c);_ribTex.wrapS=_ribTex.wrapT=THREE.RepeatWrapping;_ribTex.anisotropy=4;
+  return _ribTex;
+}
+function steelRoughTex(){
+  if(_steelRough) return _steelRough;
+  const S=128,c=document.createElement('canvas');c.width=c.height=S;const g=c.getContext('2d');
+  g.fillStyle='#9a9a9a';g.fillRect(0,0,S,S);
+  for(let i=0;i<9000;i++){g.fillStyle='rgba('+(Math.random()<.5?'255,255,255':'0,0,0')+','+(Math.random()*.06)+')';g.fillRect(Math.random()*S,Math.random()*S,1,1);}
+  _steelRough=new THREE.CanvasTexture(c);_steelRough.wrapS=_steelRough.wrapT=THREE.RepeatWrapping;return _steelRough;
+}
+function stoneKind(k){ return /quartz/.test(k)?'quartz':k==='black_granite'?'granite':k==='soapstone'?'soap':k==='sandstone'?'sand':'quartz'; }
+function stoneTexture(key){
+  if(_stoneTex[key]) return _stoneTex[key];
+  const kind=stoneKind(key),hex=STONE_HEX[key];
+  const S=256,c=document.createElement('canvas');c.width=c.height=S;const g=c.getContext('2d');
+  g.fillStyle=hex;g.fillRect(0,0,S,S);
+  const n=kind==='soap'?700:kind==='sand'?1500:2600;
+  for(let i=0;i<n;i++){const x=Math.random()*S,y=Math.random()*S,r=Math.random()*(kind==='granite'?2.4:1.5)+.25;
+    const lite=Math.random()<.5;g.fillStyle=lite?'rgba(255,255,255,'+(Math.random()*.33)+')':'rgba(0,0,0,'+(Math.random()*.26)+')';
+    g.beginPath();g.arc(x,y,r,0,7);g.fill();}
+  if(kind==='quartz'){g.strokeStyle='rgba(255,255,255,.10)';g.lineWidth=1.1;
+    for(let v=0;v<6;v++){g.beginPath();let x=Math.random()*S,y=0;g.moveTo(x,y);
+      while(y<S){x+=(Math.random()-.5)*34;y+=14+Math.random()*20;g.lineTo(x,y);}g.stroke();}}
+  if(kind==='sand'){g.strokeStyle='rgba(120,90,50,.10)';g.lineWidth=6;
+    for(let v=0;v<7;v++){g.beginPath();g.moveTo(0,v*S/7+Math.random()*8);g.lineTo(S,v*S/7+Math.random()*8);g.stroke();}}
+  const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.encoding=THREE.sRGBEncoding;t.anisotropy=4;
+  _stoneTex[key]=t;return t;
+}
+function makeEnvMap(rndr){
+  const c=document.createElement('canvas');c.width=32;c.height=128;const g=c.getContext('2d');
+  const grd=g.createLinearGradient(0,0,0,128);
+  grd.addColorStop(0,'#f3f6f8');grd.addColorStop(.45,'#bcc7ce');grd.addColorStop(.5,'#8f9aa0');
+  grd.addColorStop(.5,'#6d5f4c');grd.addColorStop(1,'#241d14');
+  g.fillStyle=grd;g.fillRect(0,0,32,128);
+  const s=g.createRadialGradient(23,24,1,23,24,22);s.addColorStop(0,'rgba(255,250,235,1)');s.addColorStop(1,'rgba(255,250,235,0)');
+  g.fillStyle=s;g.fillRect(0,0,32,60);
+  const tex=new THREE.CanvasTexture(c);tex.mapping=THREE.EquirectangularReflectionMapping;tex.encoding=THREE.sRGBEncoding;
+  const pm=new THREE.PMREMGenerator(rndr);const rt=pm.fromEquirectangular(tex);tex.dispose();pm.dispose();
+  return rt.texture;
+}
+/* scale a box's UVs per face so a tiled texture keeps constant real-world size */
+function tileBoxUV(geo,w,h,d,tileU,tileV){
+  const uv=geo.attributes.uv;
+  const faces=[[0,d,h],[4,d,h],[8,w,d],[12,w,d],[16,w,h],[20,w,h]]; // px,nx,py,ny,pz,nz
+  faces.forEach(f=>{const su=f[1]/tileU,sv=tileV?f[2]/tileV:1;
+    for(let k=0;k<4;k++){const i=f[0]+k;uv.setXY(i,uv.getX(i)*su,uv.getY(i)*sv);}});
+  uv.needsUpdate=true;
+}
+
+/* ---------- materials ---------- */
 const matCache={};
 function mat(color,rough,metal){ const k=color+'_'+rough+'_'+metal;
   if(!matCache[k]) matCache[k]=new THREE.MeshStandardMaterial({color:color,roughness:rough,metalness:metal});
   return matCache[k]; }
-const mFace =()=>mat(MENARDS[state.sidingFace].h,.72,.22);
-const mBack =()=>mat(MENARDS[state.sidingBack].h,.72,.22);
-const mToe    =()=>mat(shade(MENARDS[state.sidingFace].h,-0.16),.6,.35); // front toe = darker face
-const mToeBack=()=>mat(shade(MENARDS[state.sidingBack].h,-0.16),.6,.35); // side/back toe = darker back
-const mStone=()=>mat(STONE_HEX[state.stone],.4,.05);
+const steelCache={};
+function steelMat(hex){ if(steelCache[hex]) return steelCache[hex];
+  const m=new THREE.MeshStandardMaterial({color:hex,metalness:.8,roughness:.44,
+    normalMap:ribNormalTex(),roughnessMap:steelRoughTex(),envMapIntensity:1.0});
+  m.normalScale=new THREE.Vector2(.6,.6); steelCache[hex]=m; return m; }
+const mFace   =()=>steelMat(MENARDS[state.sidingFace].h);
+const mBack   =()=>steelMat(MENARDS[state.sidingBack].h);
+const mToe    =()=>steelMat(shade(MENARDS[state.sidingFace].h,-0.16));
+const mToeBack=()=>steelMat(shade(MENARDS[state.sidingBack].h,-0.16));
+const stoneCache={};
+function mStone(){ const key=state.stone; if(stoneCache[key]) return stoneCache[key];
+  const kind=stoneKind(key);
+  const m=new THREE.MeshPhysicalMaterial({ map:stoneTexture(key), metalness:0,
+    roughness: kind==='soap'?.5:kind==='sand'?.7:kind==='granite'?.28:.16,
+    clearcoat:(kind==='quartz'||kind==='granite')?.6:.12, clearcoatRoughness:.35, envMapIntensity:.85 });
+  stoneCache[key]=m; return m; }
+function mSteel(){ if(matCache.__steel) return matCache.__steel;
+  const m=new THREE.MeshStandardMaterial({color:'#cfd4d8',metalness:.95,roughness:.28,
+    roughnessMap:steelRoughTex(),envMapIntensity:1.0}); matCache.__steel=m; return m; }
+const mDark  =()=>mat('#1b1916',.6,.3);
+const mGrate =()=>mat('#242220',.5,.55);
+
 /* material order [ +x, -x, +y, -y, +z, -z ].
    ONLY the front panel gets `front`; sides, back, top, bottom get `other`. */
 function faceMats(axis, front, other){
@@ -2247,16 +2366,19 @@ function faceMats(axis, front, other){
   return [front,other, other,other, other,other];                // front = +x
 }
 function twoToneBox(w,h,d,axis,x,y,z){
-  const g=new THREE.Mesh(new THREE.BoxGeometry(w,h,d), faceMats(axis, mFace(), mBack()));
+  const geo=new THREE.BoxGeometry(w,h,d); tileBoxUV(geo,w,h,d,RIBPITCH,null);
+  const g=new THREE.Mesh(geo, faceMats(axis, mFace(), mBack()));
   g.position.set(x,y,z); g.castShadow=true; g.receiveShadow=true; return g;
 }
 function toeBox(w,h,d,axis,x,y,z){
-  const g=new THREE.Mesh(new THREE.BoxGeometry(w,h,d), faceMats(axis, mToe(), mToeBack()));
+  const geo=new THREE.BoxGeometry(w,h,d); tileBoxUV(geo,w,h,d,RIBPITCH,null);
+  const g=new THREE.Mesh(geo, faceMats(axis, mToe(), mToeBack()));
   g.position.set(x,y,z); g.castShadow=true; g.receiveShadow=true; return g;
 }
-const mSteel =()=>mat('#c3c8cc',.32,.85);
-const mDark  =()=>mat('#1b1916',.6,.3);
-const mGrate =()=>mat('#2a2724',.5,.6);
+function stoneBox(w,h,d,x,y,z){
+  const geo=new THREE.BoxGeometry(w,h,d); tileBoxUV(geo,w,h,d,STONETILE,STONETILE);
+  const g=new THREE.Mesh(geo, mStone()); g.position.set(x,y,z); g.castShadow=true; g.receiveShadow=true; return g;
+}
 
 function box(w,h,d,m,x,y,z,shadow){
   const g=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);
@@ -2319,7 +2441,7 @@ function addModule(m,cx,cz,axis){
     addGrillTop(m,cx,cz,sx,sz,axis);                 // stone surround + 6" recessed well + Blackstone
     addFace(m, m.under||'door2', cx,cz,wFt,axis,bodyH); // propane-access door/drawer under the grill
   } else {
-    islandGroup.add(box(sx+0.06,STK,sz+0.06,mStone(),cx,BODY_TOP+STK/2,cz)); // full bench top
+    islandGroup.add(stoneBox(sx+0.06,STK,sz+0.06,cx,BODY_TOP+STK/2,cz)); // full bench top
     addFace(m,r,cx,cz,wFt,axis,bodyH);
     addAppliance(r,cx,cz,wFt,axis);
   }
@@ -2331,10 +2453,10 @@ function addGrillTop(m,cx,cz,sx,sz,axis){
   const oX=Math.max(0.4, sx-2*b), oZ=Math.max(0.4, sz-2*b);   // opening size
   const topY=BODY_TOP+STK/2;
   // stone frame: front & back strips (full width) + left & right strips (inner length)
-  islandGroup.add(box(sx+0.06, STK, b, mStone(), cx, topY, cz-(sz/2-b/2)));
-  islandGroup.add(box(sx+0.06, STK, b, mStone(), cx, topY, cz+(sz/2-b/2)));
-  islandGroup.add(box(b, STK, oZ, mStone(), cx-(sx/2-b/2), topY, cz));
-  islandGroup.add(box(b, STK, oZ, mStone(), cx+(sx/2-b/2), topY, cz));
+  islandGroup.add(stoneBox(sx+0.06, STK, b, cx, topY, cz-(sz/2-b/2)));
+  islandGroup.add(stoneBox(sx+0.06, STK, b, cx, topY, cz+(sz/2-b/2)));
+  islandGroup.add(stoneBox(b, STK, oZ, cx-(sx/2-b/2), topY, cz));
+  islandGroup.add(stoneBox(b, STK, oZ, cx+(sx/2-b/2), topY, cz));
   // recessed well liner (dark), from the recessed floor up to the counter
   const floorY=BODY_TOP-DROP;
   islandGroup.add(box(oX, DROP+STK, oZ, mDark(), cx, floorY+(DROP+STK)/2, cz, false));
@@ -2429,7 +2551,7 @@ function addCorner(cx,cz,sizeFt){
   islandGroup.add(toeBox(sizeFt*0.94,TOE,sizeFt*0.94,'x',cx,TOE/2,cz));
   const bodyH=BODY_TOP-BODY_BOT;
   islandGroup.add(twoToneBox(sizeFt,bodyH,sizeFt,'x',cx,BODY_BOT+bodyH/2,cz));
-  islandGroup.add(box(sizeFt+0.06,STK,sizeFt+0.06,mStone(),cx,BODY_TOP+STK/2,cz));
+  islandGroup.add(stoneBox(sizeFt+0.06,STK,sizeFt+0.06,cx,BODY_TOP+STK/2,cz));
 }
 
 

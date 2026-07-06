@@ -24,15 +24,60 @@
   <!-- Navbar -->
   <nav class="navbar" id="navbar">
     <ul class="navbar__list">
-      <li class="navbar__item">Whole Home</li>
-      <li class="navbar__item">Kitchens</li>
-      <li class="navbar__item">Bathrooms</li>
-      <li class="navbar__item">Exterior</li>
-      <li class="navbar__item">Landscaping</li>
-      <li class="navbar__item">Basements</li>
-      <li class="navbar__item">
-        <button type="button" class="navbar__contact-btn" data-open-contact>Contact Us</button>
+
+      <!-- Renovation: all renovation services grouped here -->
+      <li class="navbar__item has-dd">
+        <button type="button" class="navbar__link" aria-haspopup="true" aria-expanded="false">
+          Renovation <span class="caret" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown">
+          <li><a href="#work">Whole Home</a></li>
+          <li><a href="#work">Kitchens</a></li>
+          <li><a href="#work">Bathrooms</a></li>
+          <li><a href="#work">Exterior</a></li>
+          <li><a href="#work">Landscaping</a></li>
+          <li><a href="#work">Basements</a></li>
+          <li><a href="#chefs-forge">Outdoor Kitchens</a></li>
+        </ul>
       </li>
+
+      <!-- ARC: Artisan Report Card (separate platform) — add items later -->
+      <li class="navbar__item has-dd">
+        <button type="button" class="navbar__link" aria-haspopup="true" aria-expanded="false" title="Artisan Report Card">
+          ARC <span class="caret" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown">
+          <li class="dropdown__meta">Artisan Report Card</li>
+          <!-- TODO: add ARC links here -->
+          <li><a href="#" class="dropdown__soon">Coming soon</a></li>
+        </ul>
+      </li>
+
+      <!-- Artisan Academy (separate platform) — add items later -->
+      <li class="navbar__item has-dd">
+        <button type="button" class="navbar__link" aria-haspopup="true" aria-expanded="false">
+          Artisan Academy <span class="caret" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown">
+          <li class="dropdown__meta">Artisan Academy</li>
+          <!-- TODO: add Academy links here -->
+          <li><a href="#" class="dropdown__soon">Coming soon</a></li>
+        </ul>
+      </li>
+
+      <!-- Contact Us: directory — add items later -->
+      <li class="navbar__item has-dd">
+        <button type="button" class="navbar__link" aria-haspopup="true" aria-expanded="false">
+          Contact Us <span class="caret" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown">
+          <li><a href="#" data-open-contact>Send us a message</a></li>
+          <li><a href="tel:+13309930416">Call (330) 993-0416</a></li>
+          <li><a href="mailto:ArtisanHousellc@yahoo.com">Email us</a></li>
+          <!-- TODO: add directory links here -->
+        </ul>
+      </li>
+
     </ul>
     <div class="beam" aria-hidden="true">
       <span class="beam__strap beam__strap--left"></span>

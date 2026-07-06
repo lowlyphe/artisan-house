@@ -4,6 +4,7 @@ const API_URL = window.API_URL || '';
 document.addEventListener('DOMContentLoaded', () => {
   setFooterYear();
   initStickyNavbar();
+  initNavDropdowns();
   initContactModal();
   initPortfolio();
   initBeforeAfter();
@@ -55,6 +56,38 @@ function setFooterYear() {
   if (year) year.textContent = new Date().getFullYear();
 }
 
+// Toggle the navbar dropdowns on click/touch/keyboard (hover is handled in CSS).
+function initNavDropdowns() {
+  const items = Array.from(document.querySelectorAll('.navbar__item.has-dd'));
+  if (!items.length) return;
+
+  const closeAll = (except) => {
+    items.forEach((item) => {
+      if (item === except) return;
+      item.classList.remove('is-open');
+      const btn = item.querySelector('.navbar__link');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+  };
+
+  items.forEach((item) => {
+    const btn = item.querySelector('.navbar__link');
+    if (!btn) return;
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = item.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      closeAll(item);
+    });
+  });
+
+  // Close when clicking a dropdown link or anywhere outside the nav.
+  document.addEventListener('click', () => closeAll(null));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAll(null);
+  });
+}
+
 // Pin the navbar to the top once the user scrolls past the header.
 function initStickyNavbar() {
   const navbar = document.getElementById('navbar');
@@ -86,7 +119,7 @@ function initContactModal() {
   };
 
   document.querySelectorAll('[data-open-contact]').forEach((el) =>
-    el.addEventListener('click', open)
+    el.addEventListener('click', (e) => { e.preventDefault(); open(); })
   );
   document.querySelectorAll('[data-close-contact]').forEach((el) =>
     el.addEventListener('click', close)
