@@ -15,15 +15,27 @@
 
   <!-- Header -->
   <header class="header">
-    <img src="assets/businesscardlogo.png" alt="Artisan House logo" class="header__logo" />
-    <p class="header__contact">+1 330-993-0416</p>
-    <p class="header__contact">ArtisanHousellc@yahoo.com</p>
-    <img src="assets/insured.png" alt="Fully insured" class="header__insured" />
+    <div class="header__util">
+      <p class="header__counties">Serving Mahoning &middot; Trumbull &middot; Columbiana Counties</p>
+      <div class="header__info">
+        <img src="assets/insured.png" alt="Licensed, bonded &amp; fully insured" class="header__insured" />
+        <a class="header__contact" href="tel:+13309930416">+1 330-993-0416</a>
+        <a class="header__contact" href="mailto:ArtisanHousellc@yahoo.com">ArtisanHousellc@yahoo.com</a>
+      </div>
+    </div>
+    <div class="header__brand">
+      <img src="assets/businesscardlogo.png" alt="Artisan House LLC logo" class="header__logo" />
+    </div>
   </header>
 
   <!-- Navbar -->
   <nav class="navbar" id="navbar">
-    <ul class="navbar__list">
+    <button type="button" class="navbar__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-list">
+      <span class="navbar__toggle-bar"></span>
+      <span class="navbar__toggle-bar"></span>
+      <span class="navbar__toggle-bar"></span>
+    </button>
+    <ul class="navbar__list" id="navbar-list">
 
       <!-- Renovation: all renovation services grouped here -->
       <li class="navbar__item has-dd">
@@ -41,14 +53,19 @@
         </ul>
       </li>
 
-      <!-- ARC: Artisan Report Card (separate platform) — add items later -->
+      <!-- Artisan Shop: direct-to-customer order portal -->
+      <li class="navbar__item">
+        <a class="navbar__link" href="artisan-shop.html">Artisan Shop</a>
+      </li>
+
+      <!-- Home Report Card (Artisan Report Card platform) — add items later -->
       <li class="navbar__item has-dd">
-        <button type="button" class="navbar__link" aria-haspopup="true" aria-expanded="false" title="Artisan Report Card">
-          ARC <span class="caret" aria-hidden="true"></span>
+        <button type="button" class="navbar__link" aria-haspopup="true" aria-expanded="false" title="Artisan Report Card — home inspection report cards">
+          Home Report Card <span class="caret" aria-hidden="true"></span>
         </button>
         <ul class="dropdown">
-          <li class="dropdown__meta">Artisan Report Card</li>
-          <!-- TODO: add ARC links here -->
+          <li class="dropdown__meta">Home Report Card</li>
+          <!-- TODO: add Home Report Card links here -->
           <li><a href="#" class="dropdown__soon">Coming soon</a></li>
         </ul>
       </li>
@@ -102,7 +119,30 @@
           </p>
           <a class="homepage__cta" href="#chefs-forge">Build your outdoor kitchen &#8599;</a>
         </div>
-        <img class="homepage__truck" src="assets/truckWithLogo.png" alt="Artisan truck" />
+        <div class="homepage__showcase">
+          <figure class="ba-card ba-card--mini">
+            <div class="ba-slider" style="aspect-ratio:4/3">
+              <img class="ba-img ba-after" src="assets/gallery/ba-kitchen-after.jpg" alt="Finished gray kitchen remodel, Ohio" />
+              <div class="ba-clip"><img class="ba-img ba-before" src="assets/gallery/ba-kitchen-before.jpg" alt="Kitchen before the remodel, Ohio" /></div>
+              <span class="ba-tag ba-tag--before">Before</span>
+              <span class="ba-tag ba-tag--after">After</span>
+              <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal kitchen before and after" />
+              <span class="ba-handle" aria-hidden="true"></span>
+            </div>
+            <figcaption class="ba-caption">Kitchen remodel</figcaption>
+          </figure>
+          <figure class="ba-card ba-card--mini">
+            <div class="ba-slider" style="aspect-ratio:4/3">
+              <img class="ba-img ba-after" src="assets/gallery/ba-bath-after.jpg" alt="Finished bathroom remodel, Ohio" />
+              <div class="ba-clip"><img class="ba-img ba-before" src="assets/gallery/ba-bath-before.jpg" alt="Bathroom before the remodel, Ohio" /></div>
+              <span class="ba-tag ba-tag--before">Before</span>
+              <span class="ba-tag ba-tag--after">After</span>
+              <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal bathroom before and after" />
+              <span class="ba-handle" aria-hidden="true"></span>
+            </div>
+            <figcaption class="ba-caption">Bathroom remodel</figcaption>
+          </figure>
+        </div>
       </div>
 
       <!-- Services -->
@@ -193,8 +233,7 @@
       <section class="portfolio" id="work">
         <p class="gallery__title">| Our Work |</p>
         <div class="portfolio__filters" role="tablist">
-          <button type="button" class="filter-btn is-active" data-filter="all">All</button>
-          <button type="button" class="filter-btn" data-filter="kitchen">Kitchens</button>
+          <button type="button" class="filter-btn is-active" data-filter="kitchen">Kitchens</button>
           <button type="button" class="filter-btn" data-filter="bath">Bathrooms</button>
           <button type="button" class="filter-btn" data-filter="basement">Basements</button>
           <button type="button" class="filter-btn" data-filter="exterior">Exteriors</button>
@@ -202,48 +241,18 @@
           <button type="button" class="filter-btn" data-filter="detail">Details</button>
           <button type="button" class="filter-btn" data-filter="process">In&nbsp;Progress</button>
         </div>
-        <div class="portfolio__grid" id="portfolio-grid" aria-live="polite"></div>
-        <p class="portfolio__empty" id="portfolio-empty" hidden>Gallery is loading&hellip;</p>
-      </section>
-
-      <!-- Before & After -->
-      <section class="beforeafter" id="before-after">
-        <p class="gallery__title">| Before &amp; After |</p>
-        <div class="ba-grid">
-          <div class="ba-card">
-            <div class="ba-slider" style="aspect-ratio:4/3">
-              <img class="ba-img ba-after" src="assets/gallery/ba-basement-after.jpg" loading="lazy" alt="Finished basement after remodel, Ohio" />
-              <div class="ba-clip"><img class="ba-img ba-before" src="assets/gallery/ba-basement-before.jpg" alt="Dated basement before remodel, Ohio" /></div>
-              <span class="ba-tag ba-tag--before">Before</span>
-              <span class="ba-tag ba-tag--after">After</span>
-              <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal before and after of basement remodel" />
-              <span class="ba-handle" aria-hidden="true"></span>
+        <div class="reel" id="reel">
+          <div class="reel__stage">
+            <img class="reel__img" id="reel-img" alt="" />
+            <button type="button" class="reel__nav reel__prev" aria-label="Previous photo">&lsaquo;</button>
+            <button type="button" class="reel__nav reel__next" aria-label="Next photo">&rsaquo;</button>
+            <div class="reel__bar">
+              <span class="reel__cat" id="reel-cat">Kitchens</span>
+              <span class="reel__count" id="reel-count"></span>
             </div>
-            <p class="ba-caption">Basement transformation</p>
-          </div>
-          <div class="ba-card">
-            <div class="ba-slider" style="aspect-ratio:3/4">
-              <img class="ba-img ba-after" src="assets/gallery/ba-stairs-after.jpg" loading="lazy" alt="Refinished staircase after remodel, Ohio" />
-              <div class="ba-clip"><img class="ba-img ba-before" src="assets/gallery/ba-stairs-before.jpg" alt="Worn staircase carpet before remodel, Ohio" /></div>
-              <span class="ba-tag ba-tag--before">Before</span>
-              <span class="ba-tag ba-tag--after">After</span>
-              <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal before and after of staircase" />
-              <span class="ba-handle" aria-hidden="true"></span>
-            </div>
-            <p class="ba-caption">Staircase refinish</p>
-          </div>
-          <div class="ba-card">
-            <div class="ba-slider" style="aspect-ratio:4/3">
-              <img class="ba-img ba-after" src="assets/gallery/ba-pool-after.jpg" loading="lazy" alt="Pool with new blue liner after restoration, Ohio" />
-              <div class="ba-clip"><img class="ba-img ba-before" src="assets/gallery/ba-pool-before.jpg" alt="Neglected pool before restoration, Ohio" /></div>
-              <span class="ba-tag ba-tag--before">Before</span>
-              <span class="ba-tag ba-tag--after">After</span>
-              <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal before and after of pool restoration" />
-              <span class="ba-handle" aria-hidden="true"></span>
-            </div>
-            <p class="ba-caption">Pool liner restoration</p>
           </div>
         </div>
+        <p class="portfolio__empty" id="portfolio-empty" hidden>Gallery is loading&hellip;</p>
       </section>
 
       <div class="cta">

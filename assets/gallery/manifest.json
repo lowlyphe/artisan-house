@@ -923,5 +923,45 @@
 "file": "carnegie-basement-1.jpg",
 "cat": "basement",
 "alt": "Basement remodel at 1619 Carnegie by Artisan House LLC, Ohio"
+},
+{
+"file": "fb-bath-subway.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "fb-bath-marble-1.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "fb-bath-marble-2.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "fb-bath-vanity.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "fb-bath-shower.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "fb-detail-marble.jpg",
+"cat": "detail",
+"alt": "Tile craftsmanship by Artisan House LLC, Ohio"
+},
+{
+"file": "fb-basement-done.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "fb-basement-demo.jpg",
+"cat": "process",
+"alt": "Basement remodel in progress by Artisan House LLC, Ohio"
 }
 ]

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Artisan Shop — order premade grill islands, pergolas, lawn chair and picnic table kits, mugs and handcrafted goods direct from Artisan House LLC in Ohio." />
+  <title>Artisan Shop — Artisan House LLC</title>
+  <link rel="icon" href="assets/businesscardlogo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Cinzel:wght@500;600&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__util">
+      <p class="header__counties">Serving Mahoning &middot; Trumbull &middot; Columbiana Counties</p>
+      <div class="header__info">
+        <img src="assets/insured.png" alt="Licensed, bonded &amp; fully insured" class="header__insured" />
+        <a class="header__contact" href="tel:+13309930416">+1 330-993-0416</a>
+        <a class="header__contact" href="mailto:ArtisanHousellc@yahoo.com">ArtisanHousellc@yahoo.com</a>
+      </div>
+    </div>
+    <div class="header__brand">
+      <a href="index.html"><img src="assets/businesscardlogo.png" alt="Artisan House LLC logo" class="header__logo" /></a>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <button type="button" class="navbar__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-list">
+      <span class="navbar__toggle-bar"></span>
+      <span class="navbar__toggle-bar"></span>
+      <span class="navbar__toggle-bar"></span>
+    </button>
+    <ul class="navbar__list" id="navbar-list">
+      <li class="navbar__item has-dd">
+        <button type="button" class="navbar__link" aria-haspopup="true" aria-expanded="false">
+          Renovation <span class="caret" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown">
+          <li><a href="index.html#work">Whole Home</a></li>
+          <li><a href="index.html#work">Kitchens</a></li>
+          <li><a href="index.html#work">Bathrooms</a></li>
+          <li><a href="index.html#work">Exterior</a></li>
+          <li><a href="index.html#work">Landscaping</a></li>
+          <li><a href="index.html#work">Basements</a></li>
+          <li><a href="index.html#chefs-forge">Outdoor Kitchens</a></li>
+        </ul>
+      </li>
+      <li class="navbar__item">
+        <a class="navbar__link" href="artisan-shop.html" aria-current="page">Artisan Shop</a>
+      </li>
+      <li class="navbar__item has-dd">
+        <button type="button" class="navbar__link" aria-haspopup="true" aria-expanded="false" title="Artisan Report Card — home inspection report cards">
+          Home Report Card <span class="caret" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown">
+          <li class="dropdown__meta">Home Report Card</li>
+          <li><a href="#" class="dropdown__soon">Coming soon</a></li>
+        </ul>
+      </li>
+      <li class="navbar__item has-dd">
+        <button type="button" class="navbar__link" aria-haspopup="true" aria-expanded="false">
+          Artisan Academy <span class="caret" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown">
+          <li class="dropdown__meta">Artisan Academy</li>
+          <li><a href="#" class="dropdown__soon">Coming soon</a></li>
+        </ul>
+      </li>
+      <li class="navbar__item has-dd">
+        <button type="button" class="navbar__link" aria-haspopup="true" aria-expanded="false">
+          Contact Us <span class="caret" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown">
+          <li><a href="#" data-open-contact>Send us a message</a></li>
+          <li><a href="tel:+13309930416">Call (330) 993-0416</a></li>
+          <li><a href="mailto:ArtisanHousellc@yahoo.com">Email us</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="beam" aria-hidden="true">
+      <span class="beam__strap beam__strap--left"></span>
+      <span class="beam__strap beam__strap--center"></span>
+      <span class="beam__strap beam__strap--right"></span>
+    </div>
+  </nav>
+
+  <!-- Shop -->
+  <main class="shop">
+    <p class="gallery__title">| The Artisan Shop |</p>
+    <p class="shop__intro">Order handcrafted goods direct from our shop — premade grill islands, pergolas, outdoor kits, mugs and more. Built to order in Northeast Ohio, shipped or installed.</p>
+    <p class="shop__note">These are placeholder listings — edit the titles, prices, photos and descriptions below, or add new ones, as the shop grows.</p>
+
+    <!-- ============================================================
+         EDIT ME: each <article class="shop-card"> is one product.
+         - Swap the <div class="shop-card__placeholder"> for an <img> once you have a photo.
+         - Update the tag, title, price and description.
+         - The button opens the contact form; point it wherever you like.
+         ============================================================ -->
+    <div class="shop__grid">
+
+      <article class="shop-card">
+        <div class="shop-card__media">
+          <span class="shop-card__tag">Grill Islands</span>
+          <span class="shop-card__placeholder">Signature Grill Island</span>
+        </div>
+        <div class="shop-card__body">
+          <h3 class="shop-card__title">Signature Grill Island</h3>
+          <p class="shop-card__price">Starting at $&mdash;</p>
+          <p class="shop-card__desc">Steel-framed, stone-top built-in grill island, made to order. Design yours in The Chefs Forge builder.</p>
+          <a class="shop-card__btn" href="the-chefs-forge-compact.html" target="_blank" rel="noopener">Build &amp; order &#8599;</a>
+        </div>
+      </article>
+
+      <article class="shop-card">
+        <div class="shop-card__media">
+          <span class="shop-card__tag">Grill Islands</span>
+          <span class="shop-card__placeholder">Compact Grill Cart</span>
+        </div>
+        <div class="shop-card__body">
+          <h3 class="shop-card__title">Compact Grill Cart</h3>
+          <p class="shop-card__price">Starting at $&mdash;</p>
+          <p class="shop-card__desc">A smaller rolling grill station with stone top and storage. Edit this description with sizes and options.</p>
+          <button type="button" class="shop-card__btn" data-open-contact>Inquire to order</button>
+        </div>
+      </article>
+
+      <article class="shop-card">
+        <div class="shop-card__media">
+          <span class="shop-card__tag">Pergolas</span>
+          <span class="shop-card__placeholder">Cedar Pergola Kit</span>
+        </div>
+        <div class="shop-card__body">
+          <h3 class="shop-card__title">Cedar Pergola Kit</h3>
+          <p class="shop-card__price">Starting at $&mdash;</p>
+          <p class="shop-card__desc">Pre-cut cedar pergola kit with hardware, ready to assemble. Available in multiple footprints.</p>
+          <button type="button" class="shop-card__btn" data-open-contact>Inquire to order</button>
+        </div>
+      </article>
+
+      <article class="shop-card">
+        <div class="shop-card__media">
+          <span class="shop-card__tag">Kits</span>
+          <span class="shop-card__placeholder">Adirondack Chair Kit</span>
+        </div>
+        <div class="shop-card__body">
+          <h3 class="shop-card__title">Adirondack Lawn Chair Kit</h3>
+          <p class="shop-card__price">$&mdash;</p>
+          <p class="shop-card__desc">Classic Adirondack lawn chair, precision-cut and ready to build. Sold singly or as a set.</p>
+          <button type="button" class="shop-card__btn" data-open-contact>Inquire to order</button>
+        </div>
+      </article>
+
+      <article class="shop-card">
+        <div class="shop-card__media">
+          <span class="shop-card__tag">Kits</span>
+          <span class="shop-card__placeholder">Picnic Table Kit</span>
+        </div>
+        <div class="shop-card__body">
+          <h3 class="shop-card__title">Picnic Table Kit</h3>
+          <p class="shop-card__price">$&mdash;</p>
+          <p class="shop-card__desc">Sturdy family-size picnic table kit with hardware. A-frame or detached-bench styles.</p>
+          <button type="button" class="shop-card__btn" data-open-contact>Inquire to order</button>
+        </div>
+      </article>
+
+      <article class="shop-card">
+        <div class="shop-card__media">
+          <span class="shop-card__tag">Kits</span>
+          <span class="shop-card__placeholder">Fire Pit Bench Set</span>
+        </div>
+        <div class="shop-card__body">
+          <h3 class="shop-card__title">Fire Pit Bench Set</h3>
+          <p class="shop-card__price">$&mdash;</p>
+          <p class="shop-card__desc">Curved bench set sized around a standard fire pit. Edit with wood options and seating count.</p>
+          <button type="button" class="shop-card__btn" data-open-contact>Inquire to order</button>
+        </div>
+      </article>
+
+      <article class="shop-card">
+        <div class="shop-card__media">
+          <span class="shop-card__tag">Artisan Crafts</span>
+          <span class="shop-card__placeholder">Artisan House Mug</span>
+        </div>
+        <div class="shop-card__body">
+          <h3 class="shop-card__title">Artisan House Mug</h3>
+          <p class="shop-card__price">$&mdash;</p>
+          <p class="shop-card__desc">Branded Artisan House mug. Great for gifts and job-site swag. Edit with size and colors.</p>
+          <button type="button" class="shop-card__btn" data-open-contact>Inquire to order</button>
+        </div>
+      </article>
+
+      <article class="shop-card">
+        <div class="shop-card__media">
+          <span class="shop-card__tag">Artisan Crafts</span>
+          <span class="shop-card__placeholder">Charcuterie Board</span>
+        </div>
+        <div class="shop-card__body">
+          <h3 class="shop-card__title">Live-Edge Charcuterie Board</h3>
+          <p class="shop-card__price">$&mdash;</p>
+          <p class="shop-card__desc">Hand-finished live-edge serving board. Each one unique. Edit with wood species and sizing.</p>
+          <button type="button" class="shop-card__btn" data-open-contact>Inquire to order</button>
+        </div>
+      </article>
+
+      <article class="shop-card">
+        <div class="shop-card__media">
+          <span class="shop-card__tag">Artisan Crafts</span>
+          <span class="shop-card__placeholder">Cedar Planter Box</span>
+        </div>
+        <div class="shop-card__body">
+          <h3 class="shop-card__title">Cedar Planter Box</h3>
+          <p class="shop-card__price">$&mdash;</p>
+          <p class="shop-card__desc">Handmade cedar planter box for patios and porches. Available in several heights.</p>
+          <button type="button" class="shop-card__btn" data-open-contact>Inquire to order</button>
+        </div>
+      </article>
+
+      <article class="shop-card">
+        <div class="shop-card__media">
+          <span class="shop-card__tag">Custom</span>
+          <span class="shop-card__placeholder">Custom Commission</span>
+        </div>
+        <div class="shop-card__body">
+          <h3 class="shop-card__title">Custom Artisan Commission</h3>
+          <p class="shop-card__price">Quoted per project</p>
+          <p class="shop-card__desc">Have something else in mind? Tell us your idea and we'll build it. Furniture, signage, and more.</p>
+          <button type="button" class="shop-card__btn" data-open-contact>Start a custom order</button>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer__name">Artisan House LLC</p>
+    <p class="footer__tagline">Renovation &amp; Remodeling</p>
+    <div class="footer__contact">
+      <span>Angelo Perline</span>
+      <span aria-hidden="true">&bull;</span>
+      <a href="tel:+13309930416">(330) 993-0416</a>
+      <span aria-hidden="true">&bull;</span>
+      <a href="mailto:ArtisanHousellc@yahoo.com">ArtisanHousellc@yahoo.com</a>
+    </div>
+    <p class="footer__copy">
+      Copyright <span id="year">2022</span> &copy; All Rights Reserved |
+      <a href="https://kyle-jones.dev">Developer</a>
+    </p>
+  </footer>
+
+  <!-- Contact modal -->
+  <div class="modal" id="contact-modal" aria-hidden="true">
+    <div class="modal__overlay" data-close-contact></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+      <form id="contact-form" class="contact-form">
+        <div>
+          <h2 id="contact-title" class="contact-form__title">Schedule Your Consultation</h2>
+          <p class="contact-form__intro">
+            Tell us what you're looking for — a remodel, an outdoor kitchen, or a shop order —
+            and we'll get right back to you.
+          </p>
+        </div>
+        <input class="contact-form__input" type="text" name="name" placeholder="Your name" required />
+        <input class="contact-form__input" type="email" name="email" placeholder="Email" required />
+        <textarea class="contact-form__input" name="message" placeholder="Your message" required></textarea>
+        <p class="contact-form__status" id="contact-status" role="status"></p>
+        <div class="contact-form__actions">
+          <button type="button" class="btn btn--cancel" data-close-contact>Cancel</button>
+          <button type="submit" class="btn btn--send">Send a message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

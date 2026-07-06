@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setFooterYear();
   initStickyNavbar();
   initNavDropdowns();
+  initHamburger();
   initContactModal();
   initPortfolio();
   initBeforeAfter();
@@ -169,110 +170,159 @@ function setStatus(el, message, className) {
 }
 
 // Load the gallery manifest, render the grid, then wire filters + lightbox.
+// "Our Work" as a compact highlight reel: pick a category, step through
+// photo-by-photo, and auto-play random photos (screensaver style) when idle.
 async function initPortfolio() {
-  const grid = document.getElementById('portfolio-grid');
+  const reel = document.getElementById('reel');
+  const imgEl = document.getElementById('reel-img');
+  const catEl = document.getElementById('reel-cat');
+  const countEl = document.getElementById('reel-count');
   const empty = document.getElementById('portfolio-empty');
-  if (!grid) return;
+  if (!reel || !imgEl) return;
 
-  let items = [];
+  let all = [];
   try {
     const res = await fetch('assets/gallery/manifest.json', { cache: 'no-cache' });
     if (!res.ok) throw new Error('manifest missing');
-    items = await res.json();
+    all = await res.json();
   } catch (err) {
     if (empty) { empty.hidden = false; empty.textContent = 'Portfolio is being updated — check back soon.'; }
+    reel.style.display = 'none';
     return;
   }
 
   const labels = {
-    kitchen: 'Kitchen', bath: 'Bathroom', basement: 'Basement',
-    exterior: 'Exterior', interior: 'Interior', detail: 'Detail', process: 'In progress',
+    all: 'All work', kitchen: 'Kitchens', bath: 'Bathrooms', basement: 'Basements',
+    exterior: 'Exteriors', interior: 'Interiors', detail: 'Details', process: 'In progress',
   };
 
-  const frag = document.createDocumentFragment();
-  items.forEach((it) => {
-    const fig = document.createElement('figure');
-    fig.className = 'portfolio__item';
-    fig.dataset.cat = it.cat;
-    const img = document.createElement('img');
-    img.src = 'assets/gallery/' + it.file;
-    img.loading = 'lazy';
-    img.decoding = 'async';
-    img.alt = it.alt;
-    const cap = document.createElement('figcaption');
-    cap.textContent = labels[it.cat] || it.cat;
-    fig.append(img, cap);
-    frag.appendChild(fig);
-  });
-  grid.appendChild(frag);
+  let category = 'all';
+  let list = all.slice();
+  let index = 0;
+  let hovered = false;
+  let lbOpen = false;
+  let lastManual = 0;
 
-  initPortfolioFilters();
-  initLightbox();
-}
+  const render = () => {
+    const item = list[index];
+    if (!item) return;
+    const next = new Image();
+    next.onload = () => {
+      imgEl.src = next.src;
+      imgEl.alt = item.alt;
+      imgEl.classList.remove('is-fading');
+    };
+    imgEl.classList.add('is-fading');
+    next.src = 'assets/gallery/' + item.file;
+    catEl.textContent = labels[item.cat] || item.cat;
+    countEl.textContent = (index + 1) + ' / ' + list.length;
+  };
 
-// Filter the portfolio grid by service category.
-function initPortfolioFilters() {
-  const buttons = document.querySelectorAll('.filter-btn');
-  const items = document.querySelectorAll('.portfolio__item');
-  if (!buttons.length) return;
+  const go = (delta) => {
+    if (!list.length) return;
+    index = (index + delta + list.length) % list.length;
+    render();
+  };
+  const goRandom = () => {
+    if (list.length < 2) return;
+    let r;
+    do { r = Math.floor(Math.random() * list.length); } while (r === index);
+    index = r;
+    render();
+  };
+  const setCategory = (cat) => {
+    category = cat;
+    list = category === 'all' ? all : all.filter((m) => m.cat === category);
+    index = 0;
+    render();
+  };
+  const mark = () => { lastManual = Date.now(); };
 
-  buttons.forEach((btn) =>
+  // Screensaver: auto-advance to a random photo only when idle.
+  const canAuto = () => !hovered && !lbOpen && !document.hidden && (Date.now() - lastManual > 8000);
+  setInterval(() => { if (canAuto()) goRandom(); }, 4200);
+
+  // Category chips
+  const chips = document.querySelectorAll('.filter-btn');
+  chips.forEach((btn) =>
     btn.addEventListener('click', () => {
-      buttons.forEach((b) => b.classList.remove('is-active'));
+      chips.forEach((b) => b.classList.remove('is-active'));
       btn.classList.add('is-active');
-      const filter = btn.dataset.filter;
-      items.forEach((item) => {
-        const show = filter === 'all' || item.dataset.cat === filter;
-        item.classList.toggle('is-hidden', !show);
-      });
+      setCategory(btn.dataset.filter);
+      mark();
     })
   );
-}
 
-// Click a portfolio photo to open it full-size, with prev/next and keyboard nav.
-function initLightbox() {
+  // Manual step-through
+  reel.querySelector('.reel__prev').addEventListener('click', () => { go(-1); mark(); });
+  reel.querySelector('.reel__next').addEventListener('click', () => { go(1); mark(); });
+  reel.addEventListener('mouseenter', () => { hovered = true; });
+  reel.addEventListener('mouseleave', () => { hovered = false; });
+
+  // Lightbox (full-size) — click the reel photo
   const lightbox = document.getElementById('lightbox');
-  const imgEl = document.getElementById('lightbox-img');
-  const captionEl = document.getElementById('lightbox-caption');
-  if (!lightbox || !imgEl) return;
-
-  const items = Array.from(document.querySelectorAll('.portfolio__item img'));
-  if (!items.length) return;
-  let index = 0;
-
-  const show = (i) => {
-    index = (i + items.length) % items.length;
-    const img = items[index];
-    imgEl.src = img.src;
-    imgEl.alt = img.alt;
-    captionEl.textContent = img.alt.replace(/, Ohio$/, '');
+  const lbImg = document.getElementById('lightbox-img');
+  const lbCap = document.getElementById('lightbox-caption');
+  const showLb = () => {
+    const item = list[index];
+    lbImg.src = 'assets/gallery/' + item.file;
+    lbImg.alt = item.alt;
+    lbCap.textContent = labels[item.cat] || item.cat;
   };
-
-  const open = (i) => {
-    show(i);
+  const openLb = () => {
+    if (!lightbox) return;
+    lbOpen = true;
+    showLb();
     lightbox.classList.add('is-open');
     lightbox.setAttribute('aria-hidden', 'false');
   };
-  const close = () => {
+  const closeLb = () => {
+    if (!lightbox) return;
+    lbOpen = false;
     lightbox.classList.remove('is-open');
     lightbox.setAttribute('aria-hidden', 'true');
   };
+  imgEl.addEventListener('click', openLb);
+  if (lightbox) {
+    lightbox.querySelector('.lightbox__close').addEventListener('click', closeLb);
+    lightbox.querySelector('.lightbox__next').addEventListener('click', (e) => { e.stopPropagation(); go(1); showLb(); });
+    lightbox.querySelector('.lightbox__prev').addEventListener('click', (e) => { e.stopPropagation(); go(-1); showLb(); });
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLb(); });
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('is-open')) return;
+      if (e.key === 'Escape') closeLb();
+      if (e.key === 'ArrowRight') { go(1); showLb(); }
+      if (e.key === 'ArrowLeft') { go(-1); showLb(); }
+    });
+  }
 
-  items.forEach((img, i) =>
-    img.addEventListener('click', () => open(i))
-  );
+  const active = document.querySelector('.filter-btn.is-active');
+  setCategory(active ? active.dataset.filter : (chips[0] ? chips[0].dataset.filter : 'kitchen'));
+}
 
-  lightbox.querySelector('.lightbox__close').addEventListener('click', close);
-  lightbox.querySelector('.lightbox__next').addEventListener('click', (e) => { e.stopPropagation(); show(index + 1); });
-  lightbox.querySelector('.lightbox__prev').addEventListener('click', (e) => { e.stopPropagation(); show(index - 1); });
-  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) close(); });
+// Collapse the navbar into a hamburger menu on narrow screens.
+function initHamburger() {
+  const nav = document.getElementById('navbar');
+  const toggle = document.getElementById('nav-toggle');
+  if (!nav || !toggle) return;
 
-  document.addEventListener('keydown', (e) => {
-    if (!lightbox.classList.contains('is-open')) return;
-    if (e.key === 'Escape') close();
-    if (e.key === 'ArrowRight') show(index + 1);
-    if (e.key === 'ArrowLeft') show(index - 1);
+  const close = () => {
+    nav.classList.remove('nav-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = nav.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
+
+  // Tapping a real link (dropdown item) closes the whole menu.
+  nav.querySelectorAll('.dropdown a').forEach((a) => a.addEventListener('click', close));
+
+  // Outside click / Escape closes it.
+  document.addEventListener('click', (e) => { if (!nav.contains(e.target)) close(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
 }
 
 // Drag the range slider to wipe between before and after images.
