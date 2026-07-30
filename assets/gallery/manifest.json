@@ -1,0 +1,967 @@
+[
+{
+"file": "kitchen-01.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-02.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-03.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-04.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-05.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-06.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-07.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-08.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-09.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-10.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-11.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-12.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-13.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-14.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-15.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-16.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-17.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-18.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-19.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-20.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-21.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-22.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-23.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-24.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-25.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-26.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-27.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "kitchen-28.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-01.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-02.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-03.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-04.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-05.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-06.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-07.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-08.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-09.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-10.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-11.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-12.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-13.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-14.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-15.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-16.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-17.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-18.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-19.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-20.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-21.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-22.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-23.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-24.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-25.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-26.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-27.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-28.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-29.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-30.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-31.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-32.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-33.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-34.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-35.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-36.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-37.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-38.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-39.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "bath-40.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-01.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-02.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-03.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-04.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-05.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-06.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-07.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-08.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-09.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-10.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-11.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-12.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-13.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-14.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-15.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-16.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-17.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "basement-18.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-01.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-02.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-03.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-04.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-05.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-06.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-07.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-08.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-09.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-10.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-11.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-12.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-13.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-14.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-15.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-16.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-17.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-18.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-19.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-20.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-21.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-22.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-23.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-24.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-25.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-26.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-27.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-28.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-29.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-30.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-31.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-32.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-33.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "exterior-34.jpg",
+"cat": "exterior",
+"alt": "Exterior & outdoor build by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-01.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-02.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-03.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-04.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-05.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-06.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-07.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-08.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-09.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-10.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-11.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-12.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-13.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-14.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-15.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-16.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-17.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "interior-18.jpg",
+"cat": "interior",
+"alt": "Interior remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-01.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-02.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-03.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-04.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-05.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-06.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-07.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-08.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-09.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-10.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-11.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-12.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-13.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-14.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-15.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-16.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-17.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-18.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-19.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-20.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-21.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-22.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-23.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-24.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-25.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "detail-26.jpg",
+"cat": "detail",
+"alt": "Craftsmanship detail by Artisan House LLC, Ohio"
+},
+{
+"file": "process-01.jpg",
+"cat": "process",
+"alt": "Project in progress by Artisan House LLC, Ohio"
+},
+{
+"file": "process-02.jpg",
+"cat": "process",
+"alt": "Project in progress by Artisan House LLC, Ohio"
+},
+{
+"file": "process-03.jpg",
+"cat": "process",
+"alt": "Project in progress by Artisan House LLC, Ohio"
+},
+{
+"file": "process-04.jpg",
+"cat": "process",
+"alt": "Project in progress by Artisan House LLC, Ohio"
+},
+{
+"file": "process-05.jpg",
+"cat": "process",
+"alt": "Project in progress by Artisan House LLC, Ohio"
+},
+{
+"file": "process-06.jpg",
+"cat": "process",
+"alt": "Project in progress by Artisan House LLC, Ohio"
+},
+{
+"file": "process-07.jpg",
+"cat": "process",
+"alt": "Project in progress by Artisan House LLC, Ohio"
+},
+{
+"file": "process-08.jpg",
+"cat": "process",
+"alt": "Project in progress by Artisan House LLC, Ohio"
+},
+{
+"file": "process-09.jpg",
+"cat": "process",
+"alt": "Project in progress by Artisan House LLC, Ohio"
+},
+{
+"file": "process-10.jpg",
+"cat": "process",
+"alt": "Project in progress by Artisan House LLC, Ohio"
+},
+{
+"file": "process-11.jpg",
+"cat": "process",
+"alt": "Project in progress by Artisan House LLC, Ohio"
+},
+{
+"file": "process-12.jpg",
+"cat": "process",
+"alt": "Project in progress by Artisan House LLC, Ohio"
+},
+{
+"file": "process-13.jpg",
+"cat": "process",
+"alt": "Project in progress by Artisan House LLC, Ohio"
+},
+{
+"file": "process-14.jpg",
+"cat": "process",
+"alt": "Project in progress by Artisan House LLC, Ohio"
+},
+{
+"file": "carnegie-kitchen-1.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel at 1619 Carnegie by Artisan House LLC, Ohio"
+},
+{
+"file": "carnegie-kitchen-2.jpg",
+"cat": "kitchen",
+"alt": "Kitchen remodel at 1619 Carnegie by Artisan House LLC, Ohio"
+},
+{
+"file": "carnegie-bath-1.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel at 1619 Carnegie by Artisan House LLC, Ohio"
+},
+{
+"file": "carnegie-exterior-1.jpg",
+"cat": "exterior",
+"alt": "Whole-home exterior remodel at 1619 Carnegie by Artisan House LLC, Ohio"
+},
+{
+"file": "carnegie-exterior-2.jpg",
+"cat": "exterior",
+"alt": "Whole-home exterior remodel at 1619 Carnegie by Artisan House LLC, Ohio"
+},
+{
+"file": "carnegie-interior-1.jpg",
+"cat": "interior",
+"alt": "Interior remodel at 1619 Carnegie by Artisan House LLC, Ohio"
+},
+{
+"file": "carnegie-basement-1.jpg",
+"cat": "basement",
+"alt": "Basement remodel at 1619 Carnegie by Artisan House LLC, Ohio"
+},
+{
+"file": "fb-bath-subway.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "fb-bath-marble-1.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "fb-bath-marble-2.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "fb-bath-vanity.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "fb-bath-shower.jpg",
+"cat": "bath",
+"alt": "Bathroom remodel by Artisan House LLC, Ohio"
+},
+{
+"file": "fb-detail-marble.jpg",
+"cat": "detail",
+"alt": "Tile craftsmanship by Artisan House LLC, Ohio"
+},
+{
+"file": "fb-basement-done.jpg",
+"cat": "basement",
+"alt": "Finished basement by Artisan House LLC, Ohio"
+},
+{
+"file": "fb-basement-demo.jpg",
+"cat": "process",
+"alt": "Basement remodel in progress by Artisan House LLC, Ohio"
+}
+]

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Artisan House LLC — home remodeling and building. Kitchens, bathrooms, whole-home remodels, decks, basements and landscaping." />
+  <title>Artisan House LLC</title>
+  <link rel="icon" href="assets/businesscardlogo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Cinzel:wght@500;600&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__util">
+      <p class="header__counties">Serving Mahoning &middot; Trumbull &middot; Columbiana Counties</p>
+      <div class="header__info">
+        <img src="assets/insured.png" alt="Licensed, bonded &amp; fully insured" class="header__insured" />
+        <a class="header__contact" href="tel:+13309930416">+1 330-993-0416</a>
+        <a class="header__contact" href="mailto:ArtisanHousellc@yahoo.com">ArtisanHousellc@yahoo.com</a>
+      </div>
+    </div>
+    <div class="header__brand">
+      <img src="assets/businesscardlogo.png" alt="Artisan House LLC logo" class="header__logo" />
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <button type="button" class="navbar__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-list">
+      <span class="navbar__toggle-bar"></span>
+      <span class="navbar__toggle-bar"></span>
+      <span class="navbar__toggle-bar"></span>
+    </button>
+    <ul class="navbar__list" id="navbar-list">
+
+      <!-- Renovation: all renovation services grouped here -->
+      <li class="navbar__item has-dd">
+        <button type="button" class="navbar__link" aria-haspopup="true" aria-expanded="false">
+          Renovation <span class="caret" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown">
+          <li><a href="#work">Whole Home</a></li>
+          <li><a href="#work">Kitchens</a></li>
+          <li><a href="#work">Bathrooms</a></li>
+          <li><a href="#work">Exterior</a></li>
+          <li><a href="#work">Landscaping</a></li>
+          <li><a href="#work">Basements</a></li>
+          <li><a href="#chefs-forge">Outdoor Kitchens</a></li>
+        </ul>
+      </li>
+
+      <!-- Artisan Shop: direct-to-customer order portal -->
+      <li class="navbar__item">
+        <a class="navbar__link" href="artisan-shop.html">Artisan Shop</a>
+      </li>
+
+      <!-- Home Report Card (Artisan Report Card platform) — add items later -->
+      <li class="navbar__item has-dd">
+        <button type="button" class="navbar__link" aria-haspopup="true" aria-expanded="false" title="Artisan Report Card — home inspection report cards">
+          Home Report Card <span class="caret" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown">
+          <li class="dropdown__meta">Home Report Card</li>
+          <!-- TODO: add Home Report Card links here -->
+          <li><a href="#" class="dropdown__soon">Coming soon</a></li>
+        </ul>
+      </li>
+
+      <!-- Artisan Academy (separate platform) — add items later -->
+      <li class="navbar__item has-dd">
+        <button type="button" class="navbar__link" aria-haspopup="true" aria-expanded="false">
+          Artisan Academy <span class="caret" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown">
+          <li class="dropdown__meta">Artisan Academy</li>
+          <!-- TODO: add Academy links here -->
+          <li><a href="#" class="dropdown__soon">Coming soon</a></li>
+        </ul>
+      </li>
+
+      <!-- Contact Us: directory — add items later -->
+      <li class="navbar__item has-dd">
+        <button type="button" class="navbar__link" aria-haspopup="true" aria-expanded="false">
+          Contact Us <span class="caret" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown">
+          <li><a href="#" data-open-contact>Send us a message</a></li>
+          <li><a href="tel:+13309930416">Call (330) 993-0416</a></li>
+          <li><a href="mailto:ArtisanHousellc@yahoo.com">Email us</a></li>
+          <!-- TODO: add directory links here -->
+        </ul>
+      </li>
+
+    </ul>
+    <div class="beam" aria-hidden="true">
+      <span class="beam__strap beam__strap--left"></span>
+      <span class="beam__strap beam__strap--center"></span>
+      <span class="beam__strap beam__strap--right"></span>
+    </div>
+  </nav>
+
+  <!-- Homepage -->
+  <main class="homepage">
+    <img class="homepage__hero" src="assets/homepagehome.jpg" alt="Artisan House featured home" />
+
+    <div class="homepage__body">
+      <div class="homepage__intro">
+        <div class="homepage__intro-text">
+          <h2 class="homepage__heading">Welcome to Artisan House</h2>
+          <span class="homepage__rule"></span>
+          <p>
+            Where you're not only a customer, you're family. We treat your house as if
+            it's our own, and we're here for you every step of the way. Give us a call
+            and let us be the artisans turning your home dreams into reality.
+          </p>
+          <a class="homepage__cta" href="#chefs-forge">Build your outdoor kitchen &#8599;</a>
+        </div>
+        <div class="homepage__showcase">
+          <figure class="ba-card ba-card--mini">
+            <div class="ba-slider" style="aspect-ratio:4/3">
+              <img class="ba-img ba-after" src="assets/gallery/ba-kitchen-after.jpg" alt="Finished gray kitchen remodel, Ohio" />
+              <div class="ba-clip"><img class="ba-img ba-before" src="assets/gallery/ba-kitchen-before.jpg" alt="Kitchen before the remodel, Ohio" /></div>
+              <span class="ba-tag ba-tag--before">Before</span>
+              <span class="ba-tag ba-tag--after">After</span>
+              <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal kitchen before and after" />
+              <span class="ba-handle" aria-hidden="true"></span>
+            </div>
+            <figcaption class="ba-caption">Kitchen remodel</figcaption>
+          </figure>
+          <figure class="ba-card ba-card--mini">
+            <div class="ba-slider" style="aspect-ratio:4/3">
+              <img class="ba-img ba-after" src="assets/gallery/ba-bath-after.jpg" alt="Finished bathroom remodel, Ohio" />
+              <div class="ba-clip"><img class="ba-img ba-before" src="assets/gallery/ba-bath-before.jpg" alt="Bathroom before the remodel, Ohio" /></div>
+              <span class="ba-tag ba-tag--before">Before</span>
+              <span class="ba-tag ba-tag--after">After</span>
+              <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal bathroom before and after" />
+              <span class="ba-handle" aria-hidden="true"></span>
+            </div>
+            <figcaption class="ba-caption">Bathroom remodel</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <section class="services" id="services">
+        <p class="gallery__title">| Our Services |</p>
+        <div class="services__strip" role="list">
+          <article class="svc" role="listitem" tabindex="0" style="background-image:url('assets/service-wholehome.jpg')">
+            <span class="svc__num">01</span>
+            <span class="svc__vlabel">Whole Home</span>
+            <div class="svc__panel">
+              <h3 class="svc__title">Whole Home Remodeling</h3>
+              <span class="svc__rule"></span>
+              <p class="svc__desc">Full-scope remodels that reimagine your entire home — from layout and structure to the final finishes, managed every step of the way.</p>
+              <button type="button" class="svc__btn" data-open-contact>Start your project</button>
+            </div>
+          </article>
+          <article class="svc" role="listitem" tabindex="0" style="background-image:url('assets/service-kitchen.jpg')">
+            <span class="svc__num">02</span>
+            <span class="svc__vlabel">Kitchens</span>
+            <div class="svc__panel">
+              <h3 class="svc__title">Kitchens</h3>
+              <span class="svc__rule"></span>
+              <p class="svc__desc">Cabinetry, countertops, islands and layouts designed around how you actually cook, gather and live.</p>
+              <button type="button" class="svc__btn" data-open-contact>Start your project</button>
+            </div>
+          </article>
+          <article class="svc" role="listitem" tabindex="0" style="background-image:url('assets/service-bath.jpg')">
+            <span class="svc__num">03</span>
+            <span class="svc__vlabel">Bathrooms</span>
+            <div class="svc__panel">
+              <h3 class="svc__title">Bathrooms</h3>
+              <span class="svc__rule"></span>
+              <p class="svc__desc">Custom vanities, tile, lighting and fixtures installed with the kind of craftsmanship that holds up for years.</p>
+              <button type="button" class="svc__btn" data-open-contact>Start your project</button>
+            </div>
+          </article>
+          <article class="svc" role="listitem" tabindex="0" style="background-image:url('assets/deck.webp')">
+            <span class="svc__num">04</span>
+            <span class="svc__vlabel">Decks &amp; Porches</span>
+            <div class="svc__panel">
+              <h3 class="svc__title">Decks &amp; Porches</h3>
+              <span class="svc__rule"></span>
+              <p class="svc__desc">Timber-frame porches, decks and outdoor living spaces built to last through every Ohio season.</p>
+              <button type="button" class="svc__btn" data-open-contact>Start your project</button>
+            </div>
+          </article>
+          <article class="svc" role="listitem" tabindex="0" style="background-image:url('assets/den/den1.jpg')">
+            <span class="svc__num">05</span>
+            <span class="svc__vlabel">Basements</span>
+            <div class="svc__panel">
+              <h3 class="svc__title">Basements</h3>
+              <span class="svc__rule"></span>
+              <p class="svc__desc">Turn unused square footage into your favorite room — finished, comfortable and code-compliant.</p>
+              <button type="button" class="svc__btn" data-open-contact>Start your project</button>
+            </div>
+          </article>
+          <article class="svc" role="listitem" tabindex="0" style="background-image:url('assets/landscaping/stone1.jpg')">
+            <span class="svc__num">06</span>
+            <span class="svc__vlabel">Landscaping</span>
+            <div class="svc__panel">
+              <h3 class="svc__title">Landscaping</h3>
+              <span class="svc__rule"></span>
+              <p class="svc__desc">Stonework, hardscaping and landscaping that elevate your curb appeal from the ground up.</p>
+              <button type="button" class="svc__btn" data-open-contact>Start your project</button>
+            </div>
+          </article>
+        </div>
+        <p class="services__hint"><span class="services__hint-hover">Hover a service to explore</span><span class="services__hint-swipe">Swipe to explore your service</span></p>
+      </section>
+
+      <!-- The Chefs Forge — outdoor kitchen builder -->
+      <section class="forge" id="chefs-forge">
+        <p class="gallery__title">| Build Your Outdoor Kitchen |</p>
+        <p class="forge__intro">Design a steel-framed, stone-top built-in grill island with <strong>The Chefs Forge</strong> — choose your layout, grill, drawers and doors, then generate your own order sheet. Made to order and shipped.</p>
+        <div class="forge__window">
+          <div class="forge__bar">
+            <span class="forge__dot"></span>
+            <span class="forge__dot"></span>
+            <span class="forge__dot"></span>
+            <span class="forge__bar-title">The Chefs Forge — Outdoor Kitchen Builder</span>
+            <a class="forge__expand" href="the-chefs-forge-compact.html" target="_blank" rel="noopener">Open full screen &#8599;</a>
+          </div>
+          <iframe class="forge__frame" src="the-chefs-forge-compact.html" title="The Chefs Forge — Outdoor Kitchen Builder" loading="lazy" allow="clipboard-write"></iframe>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section class="portfolio" id="work">
+        <p class="gallery__title">| Our Work |</p>
+        <div class="portfolio__filters" role="tablist">
+          <button type="button" class="filter-btn is-active" data-filter="kitchen">Kitchens</button>
+          <button type="button" class="filter-btn" data-filter="bath">Bathrooms</button>
+          <button type="button" class="filter-btn" data-filter="basement">Basements</button>
+          <button type="button" class="filter-btn" data-filter="exterior">Exteriors</button>
+          <button type="button" class="filter-btn" data-filter="interior">Interiors</button>
+          <button type="button" class="filter-btn" data-filter="detail">Details</button>
+          <button type="button" class="filter-btn" data-filter="process">In&nbsp;Progress</button>
+        </div>
+        <div class="reel" id="reel">
+          <div class="reel__stage">
+            <img class="reel__img" id="reel-img" alt="" />
+            <button type="button" class="reel__nav reel__prev" aria-label="Previous photo">&lsaquo;</button>
+            <button type="button" class="reel__nav reel__next" aria-label="Next photo">&rsaquo;</button>
+            <div class="reel__bar">
+              <span class="reel__cat" id="reel-cat">Kitchens</span>
+              <span class="reel__count" id="reel-count"></span>
+            </div>
+          </div>
+        </div>
+        <p class="portfolio__empty" id="portfolio-empty" hidden>Gallery is loading&hellip;</p>
+      </section>
+
+      <div class="cta">
+        <div>
+          <p class="cta__lead">Ready to discuss your remodeling or building project?</p>
+          <p class="cta__sub">Call us toll free at 330-993-0416 to discuss your next dream project</p>
+        </div>
+        <button type="button" class="cta__btn" data-open-contact>Contact Us</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button type="button" class="lightbox__close" aria-label="Close">&times;</button>
+    <button type="button" class="lightbox__nav lightbox__prev" aria-label="Previous">&lsaquo;</button>
+    <img class="lightbox__img" id="lightbox-img" alt="" />
+    <button type="button" class="lightbox__nav lightbox__next" aria-label="Next">&rsaquo;</button>
+    <p class="lightbox__caption" id="lightbox-caption"></p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer__name">Artisan House LLC</p>
+    <p class="footer__tagline">Renovation &amp; Remodeling</p>
+    <div class="footer__contact">
+      <span>Angelo Perline</span>
+      <span aria-hidden="true">&bull;</span>
+      <a href="tel:+13309930416">(330) 993-0416</a>
+      <span aria-hidden="true">&bull;</span>
+      <a href="mailto:ArtisanHousellc@yahoo.com">ArtisanHousellc@yahoo.com</a>
+    </div>
+    <p class="footer__copy">
+      Copyright <span id="year">2022</span> &copy; All Rights Reserved |
+      <a href="https://kyle-jones.dev">Developer</a>
+    </p>
+  </footer>
+
+  <!-- Contact modal -->
+  <div class="modal" id="contact-modal" aria-hidden="true">
+    <div class="modal__overlay" data-close-contact></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+      <form id="contact-form" class="contact-form">
+        <div>
+          <h2 id="contact-title" class="contact-form__title">Schedule Your Consultation</h2>
+          <p class="contact-form__intro">
+            At Artisan House, we understand that when taking on a sizeable project you have
+            a lot of options. Talk with us, tell us your vision, and we'll work with you
+            every step of the way until we make it your reality.
+          </p>
+        </div>
+        <input class="contact-form__input" type="text" name="name" placeholder="Your name" required />
+        <input class="contact-form__input" type="email" name="email" placeholder="Email" required />
+        <textarea class="contact-form__input" name="message" placeholder="Your message" required></textarea>
+        <p class="contact-form__status" id="contact-status" role="status"></p>
+        <div class="contact-form__actions">
+          <button type="button" class="btn btn--cancel" data-close-contact>Cancel</button>
+          <button type="submit" class="btn btn--send">Send a message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
